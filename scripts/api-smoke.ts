@@ -26,8 +26,13 @@ async function main(){
   await call("/api/plays","POST",{gameId:game.id,duration:null,players:[{id:p1.id,winner:true},{id:p2.id,winner:false}]});
   const stats=await call<any>("/api/stats");
   assert.equal(stats.players.find((player:any)=>player.id===p1.id).wins,2);
-  assert.equal(stats.players.find((player:any)=>player.id===p1.id).averageScore,100);
-  assert.ok(stats.scoresByPlayerCount.some((row:any)=>row.playerCount===2));
+  assert.equal(stats.players.find((player:any)=>player.id===p1.id).winRate,100);
+  assert.ok(stats.topGames.some((item:any)=>item.name===edited.name));
+  assert.equal(stats.averageScore,undefined);
+  const gameStats=await call<any>(`/api/stats?gameId=${game.id}`);
+  assert.equal(gameStats.players.find((player:any)=>player.id===p1.id).averageScore,100);
+  assert.equal(gameStats.averageScore.value,75);
+  assert.ok(gameStats.scoresByPlayerCount.some((row:any)=>row.playerCount===2));
   assert.equal((await call<any[]>("/api/games")).find(item=>item.id===game.id).avgDuration,17);
 
   await call("/api/rules","POST",{gameId:game.id,title:"Construction",content:"Une route relie deux villages."});

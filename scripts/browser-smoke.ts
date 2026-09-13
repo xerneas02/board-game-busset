@@ -55,6 +55,18 @@ async function main() {
         await page.waitForSelector("#replay-title");
         await page.evaluate(() => [...document.querySelectorAll<HTMLButtonElement>("button")].find(button => button.textContent?.trim() === "Rejouer")?.click());
         await page.waitForSelector(".running strong");
+        page.once("dialog", dialog => dialog.accept());
+        await page.evaluate(() => [...document.querySelectorAll<HTMLButtonElement>("button")].find(button => button.textContent?.trim() === "Annuler cette partie")?.click());
+        await page.waitForSelector(".game-stats");
+        assert.match(await page.$eval(".game-stats", element => element.textContent || ""), /score moyen/i);
+        await page.screenshot({ path: "game-stats-390.png", fullPage: true });
+        await page.evaluate(() => [...document.querySelectorAll<HTMLButtonElement>("button")].find(button => button.textContent?.includes("Retour"))?.click());
+        await page.click(".bottom-nav button:nth-child(3)");
+        await page.waitForSelector(".stats .stat-row");
+        const globalStats = await page.$eval(".stats", element => element.textContent || "");
+        assert.doesNotMatch(globalStats, /score moyen/i);
+        assert.match(globalStats, /% de victoires/);
+        await page.screenshot({ path: "stats-390.png", fullPage: true });
       }
       await page.close();
       console.log(`${width}px : OK`);

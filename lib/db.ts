@@ -56,4 +56,4 @@ db.transaction(() => {
 const fillCover=db.prepare("UPDATE games SET coverPath=? WHERE name=? AND (coverPath IS NULL OR coverPath=?)");
 const fillRules=db.prepare("UPDATE games SET rulesUrl=? WHERE name=? AND rulesUrl IS NULL");
 db.transaction(()=>{for(const [name,asset] of Object.entries(seedAssets)){const local=cachedCovers[name as keyof typeof cachedCovers];if(local)fillCover.run(local,name,asset.cover);if(asset.rules)fillRules.run(asset.rules,name)}})();
-db.prepare("UPDATE games SET rulesUrl=? WHERE name='Sequence' AND rulesUrl=?").run("https://www.jaxgames.com/sequence-game-ru
+db.prepare("UPDATE games SET rulesUrl=? WHERE name='Sequence' AND rulesUrl=?").run("https://www.jaxgames.com/sequence-game-rules/","https://www.jaxgames.com/sequence-game-instructions/");

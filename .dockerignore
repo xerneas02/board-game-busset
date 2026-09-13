@@ -1,6 +1,10 @@
 node_modules
 .next
 .npm-cache
+.git
+.agents
+.codex
+*.tsbuildinfo
 .env
 data/*.db
 data/*.db-*

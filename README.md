@@ -15,13 +15,13 @@ Vérifier avec `npm test` et `npm run build`, puis lancer la version de producti
 
 ## VPS / Docker
 
-Copier `.env.example` en `.env`, définir `FAMILY_PASSWORD` pour activer le mot de passe familial partagé, puis lancer :
+Copier `.env.example` en `.env`, définir `FAMILY_PASSWORD` pour activer la protection, puis lancer :
 
 ```bash
 docker compose up -d --build
 ```
 
-Publier de préférence derrière un reverse-proxy HTTPS. Le mot de passe HTTP Basic n’est pas chiffré sans HTTPS.
+Le navigateur demande l’identifiant `famille` et le mot de passe défini dans `.env`. Publier derrière un reverse-proxy HTTPS car HTTP Basic n’est pas chiffré sans HTTPS.
 
 Sauvegarder régulièrement la base et les fichiers ajoutés :
 

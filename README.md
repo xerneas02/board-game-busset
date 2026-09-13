@@ -21,7 +21,7 @@ Copier `.env.example` en `.env`, définir `FAMILY_PASSWORD` pour activer la prot
 docker compose up -d --build
 ```
 
-Le navigateur demande l’identifiant `famille` et le mot de passe défini dans `.env`. Publier derrière un reverse-proxy HTTPS car HTTP Basic n’est pas chiffré sans HTTPS.
+L’application affiche une page qui demande uniquement le mot de passe défini dans `.env`. Publier derrière un reverse-proxy HTTPS pour protéger les échanges.
 
 Sauvegarder régulièrement la base et les fichiers ajoutés :
 

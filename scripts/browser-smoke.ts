@@ -14,6 +14,12 @@ async function main() {
       const page = await browser.newPage();
       await page.setViewport({ width, height: 844, deviceScaleFactor: 1 });
       await page.goto(base, { waitUntil: "networkidle2" });
+      if (await page.$("#family-password")) {
+        assert.ok(process.env.SMOKE_PASSWORD, "SMOKE_PASSWORD requis pour la page protégée");
+        if (width === 360) await page.screenshot({ path: "login-360.png" });
+        await page.type("#family-password", process.env.SMOKE_PASSWORD);
+        await Promise.all([page.waitForNavigation({ waitUntil: "networkidle2" }), page.click(".login-panel button")]);
+      }
       const sizing = await page.evaluate(() => ({ innerWidth, scrollWidth: document.documentElement.scrollWidth }));
       assert.equal(sizing.innerWidth, width);
       assert.ok(sizing.scrollWidth <= width, `Débordement à ${width}px : ${sizing.scrollWidth}`);
@@ -34,12 +40,13 @@ async function main() {
         await page.waitForSelector(".game-title");
         await page.evaluate(() => [...document.querySelectorAll<HTMLButtonElement>("button")].find(button => button.textContent?.trim() === "Nouvelle partie")?.click());
         await page.waitForSelector("#picker-title");
-        if (!(await page.$(".player-grid button"))) {
+        if (!(await page.$(".known-player-list button"))) {
           await page.type('input[aria-label="Nouveau joueur"]', "Joueur test");
           await page.click('button[aria-label="Ajouter le joueur"]');
+        } else {
+          await page.click(".known-player-list button");
         }
-        await page.waitForSelector(".player-grid button");
-        if (!(await page.$('.player-grid button[aria-pressed="true"]'))) await page.click(".player-grid button");
+        await page.waitForSelector(".selected-players button");
         await new Promise(resolve => setTimeout(resolve, 250));
         await page.screenshot({ path: "players-390.png" });
         await page.evaluate(() => [...document.querySelectorAll<HTMLButtonElement>("button")].find(button => button.textContent?.trim() === "Commencer avec le chrono")?.click());

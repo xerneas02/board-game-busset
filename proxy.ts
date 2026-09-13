@@ -1,20 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
+import { AUTH_COOKIE, authToken } from "@/lib/auth";
 
-export function proxy(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const password = process.env.FAMILY_PASSWORD;
-  if (!password) return NextResponse.next();
+  if (!password || request.cookies.get(AUTH_COOKIE)?.value === await authToken(password)) return NextResponse.next();
 
-  const token = request.headers.get("authorization")?.split(" ")[1];
-  try {
-    if (token && atob(token) === `famille:${password}`) return NextResponse.next();
-  } catch {
-    // An invalid Basic token simply requires a new login.
-  }
-
-  return new NextResponse("Accès familial", {
-    status: 401,
-    headers: { "WWW-Authenticate": 'Basic realm="Sous lescalier"' },
-  });
+  if (request.nextUrl.pathname.startsWith("/api/")) return NextResponse.json({ error: "Accès refusé" }, { status: 401 });
+  const login = new URL("/login", request.url);
+  login.searchParams.set("next", `${request.nextUrl.pathname}${request.nextUrl.search}`);
+  return NextResponse.redirect(login);
 }
 
-export const config = { matcher: ["/((?!_next|icon.svg|manifest.webmanifest).*)"] };
+export const config = { matcher: ["/((?!_next|icon.svg|manifest.webmanifest|sw.js|login|api/login).*)"] };

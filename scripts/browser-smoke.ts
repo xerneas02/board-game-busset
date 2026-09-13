@@ -40,6 +40,8 @@ async function main() {
         }
         await page.waitForSelector(".player-grid button");
         if (!(await page.$('.player-grid button[aria-pressed="true"]'))) await page.click(".player-grid button");
+        await new Promise(resolve => setTimeout(resolve, 250));
+        await page.screenshot({ path: "players-390.png" });
         await page.evaluate(() => [...document.querySelectorAll<HTMLButtonElement>("button")].find(button => button.textContent?.trim() === "Commencer avec le chrono")?.click());
         await page.waitForSelector(".running strong");
         assert.match(await page.$eval(".running strong", element => element.textContent || ""), /^\d\d:\d\d:\d\d$/);
@@ -50,6 +52,7 @@ async function main() {
         assert.match(await page.$eval(".finished-time", element => element.textContent || ""), /non enregistrée/);
         await page.click(".player-grid button");
         await page.type(".scores input", "42");
+        await new Promise(resolve => setTimeout(resolve, 250));
         await page.screenshot({ path: "scores-390.png" });
         await page.evaluate(() => [...document.querySelectorAll<HTMLButtonElement>("button")].find(button => button.textContent?.trim() === "Enregistrer la partie")?.click());
         await page.waitForSelector("#replay-title");

@@ -1,0 +1,15 @@
+services:
+  sous-lescalier:
+    build: .
+    restart: unless-stopped
+    ports: ["3000:3000"]
+    environment:
+      DATABASE_PATH: /app/data/library.db
+      UPLOAD_DIR: /app/public/uploads
+      FAMILY_PASSWORD: ${FAMILY_PASSWORD:-}
+    volumes:
+      - game-data:/app/data
+      - game-uploads:/app/public/uploads
+volumes:
+  game-data:
+  game-uploads:

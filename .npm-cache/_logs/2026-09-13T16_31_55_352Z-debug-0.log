@@ -1,0 +1,227 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.2.0
+2 info using node@v21.1.0
+3 timing npm:load:whichnode Completed in 2ms
+4 timing config:load:defaults Completed in 1ms
+5 timing config:load:file:C:\Program Files\nodejs\node_modules\npm\npmrc Completed in 4ms
+6 timing config:load:builtin Completed in 4ms
+7 timing config:load:cli Completed in 3ms
+8 timing config:load:env Completed in 0ms
+9 timing config:load:file:D:\Programation\Python\board-game-busset\.npmrc Completed in 0ms
+10 timing config:load:project Completed in 1ms
+11 timing config:load:file:C:\Users\mathi\.npmrc Completed in 0ms
+12 timing config:load:user Completed in 0ms
+13 timing config:load:file:C:\Users\mathi\AppData\Roaming\npm\etc\npmrc Completed in 0ms
+14 timing config:load:global Completed in 0ms
+15 timing config:load:setEnvs Completed in 1ms
+16 timing config:load Completed in 13ms
+17 timing npm:load:configload Completed in 13ms
+18 timing config:load:flatten Completed in 2ms
+19 timing npm:load:mkdirpcache Completed in 1ms
+20 timing npm:load:mkdirplogs Completed in 0ms
+21 verbose title npm audit
+22 verbose argv "audit" "--omit" "dev" "--json" "--cache" ".npm-cache"
+23 timing npm:load:setTitle Completed in 1ms
+24 timing npm:load:display Completed in 1ms
+25 verbose logfile logs-max:10 dir:D:\Programation\Python\board-game-busset\.npm-cache\_logs\2026-09-13T16_31_55_352Z-
+26 verbose logfile D:\Programation\Python\board-game-busset\.npm-cache\_logs\2026-09-13T16_31_55_352Z-debug-0.log
+27 timing npm:load:logFile Completed in 13ms
+28 timing npm:load:timers Completed in 0ms
+29 timing npm:load:configScope Completed in 0ms
+30 timing npm:load Completed in 63ms
+31 timing arborist:ctor Completed in 1ms
+32 silly logfile done cleaning log files
+33 silly audit bulk request {
+33 silly audit   '@emnapi/runtime': [ '1.11.3' ],
+33 silly audit   '@img/colour': [ '1.1.0' ],
+33 silly audit   '@img/sharp-darwin-arm64': [ '0.35.4' ],
+33 silly audit   '@img/sharp-darwin-x64': [ '0.35.4' ],
+33 silly audit   '@img/sharp-freebsd-wasm32': [ '0.35.4' ],
+33 silly audit   '@img/sharp-libvips-darwin-arm64': [ '1.3.3' ],
+33 silly audit   '@img/sharp-libvips-darwin-x64': [ '1.3.3' ],
+33 silly audit   '@img/sharp-libvips-linux-arm': [ '1.3.3' ],
+33 silly audit   '@img/sharp-libvips-linux-arm64': [ '1.3.3' ],
+33 silly audit   '@img/sharp-libvips-linux-ppc64': [ '1.3.3' ],
+33 silly audit   '@img/sharp-libvips-linux-riscv64': [ '1.3.3' ],
+33 silly audit   '@img/sharp-libvips-linux-s390x': [ '1.3.3' ],
+33 silly audit   '@img/sharp-libvips-linux-x64': [ '1.3.3' ],
+33 silly audit   '@img/sharp-libvips-linuxmusl-arm64': [ '1.3.3' ],
+33 silly audit   '@img/sharp-libvips-linuxmusl-x64': [ '1.3.3' ],
+33 silly audit   '@img/sharp-linux-arm': [ '0.35.4' ],
+33 silly audit   '@img/sharp-linux-arm64': [ '0.35.4' ],
+33 silly audit   '@img/sharp-linux-ppc64': [ '0.35.4' ],
+33 silly audit   '@img/sharp-linux-riscv64': [ '0.35.4' ],
+33 silly audit   '@img/sharp-linux-s390x': [ '0.35.4' ],
+33 silly audit   '@img/sharp-linux-x64': [ '0.35.4' ],
+33 silly audit   '@img/sharp-linuxmusl-arm64': [ '0.35.4' ],
+33 silly audit   '@img/sharp-linuxmusl-x64': [ '0.35.4' ],
+33 silly audit   '@img/sharp-wasm32': [ '0.35.4' ],
+33 silly audit   '@img/sharp-webcontainers-wasm32': [ '0.35.4' ],
+33 silly audit   '@img/sharp-win32-arm64': [ '0.35.4' ],
+33 silly audit   '@img/sharp-win32-ia32': [ '0.35.4' ],
+33 silly audit   '@img/sharp-win32-x64': [ '0.35.4' ],
+33 silly audit   '@napi-rs/canvas': [ '0.1.100' ],
+33 silly audit   '@napi-rs/canvas-android-arm64': [ '0.1.100' ],
+33 silly audit   '@napi-rs/canvas-darwin-arm64': [ '0.1.100' ],
+33 silly audit   '@napi-rs/canvas-darwin-x64': [ '0.1.100' ],
+33 silly audit   '@napi-rs/canvas-linux-arm-gnueabihf': [ '0.1.100' ],
+33 silly audit   '@napi-rs/canvas-linux-arm64-gnu': [ '0.1.100' ],
+33 silly audit   '@napi-rs/canvas-linux-arm64-musl': [ '0.1.100' ],
+33 silly audit   '@napi-rs/canvas-linux-riscv64-gnu': [ '0.1.100' ],
+33 silly audit   '@napi-rs/canvas-linux-x64-gnu': [ '0.1.100' ],
+33 silly audit   '@napi-rs/canvas-linux-x64-musl': [ '0.1.100' ],
+33 silly audit   '@napi-rs/canvas-win32-arm64-msvc': [ '0.1.100' ],
+33 silly audit   '@napi-rs/canvas-win32-x64-msvc': [ '0.1.100' ],
+33 silly audit   '@next/env': [ '15.5.25' ],
+33 silly audit   '@next/swc-darwin-arm64': [ '15.5.25' ],
+33 silly audit   '@next/swc-darwin-x64': [ '15.5.25' ],
+33 silly audit   '@next/swc-linux-arm64-gnu': [ '15.5.25' ],
+33 silly audit   '@next/swc-linux-arm64-musl': [ '15.5.25' ],
+33 silly audit   '@next/swc-linux-x64-gnu': [ '15.5.25' ],
+33 silly audit   '@next/swc-linux-x64-musl': [ '15.5.25' ],
+33 silly audit   '@next/swc-win32-arm64-msvc': [ '15.5.25' ],
+33 silly audit   '@next/swc-win32-x64-msvc': [ '15.5.25' ],
+33 silly audit   'tar-fs': [ '2.1.5' ],
+33 silly audit   'tar-stream': [ '2.2.0' ],
+33 silly audit   '@swc/helpers': [ '0.5.15' ],
+33 silly audit   '@types/better-sqlite3': [ '7.6.13' ],
+33 silly audit   '@types/node': [ '22.20.2' ],
+33 silly audit   '@types/react': [ '19.3.0' ],
+33 silly audit   'base64-js': [ '1.5.1' ],
+33 silly audit   'better-sqlite3': [ '11.10.0' ],
+33 silly audit   bindings: [ '1.5.0' ],
+33 silly audit   bl: [ '4.1.0' ],
+33 silly audit   buffer: [ '5.7.1' ],
+33 silly audit   'caniuse-lite': [ '1.0.30001810' ],
+33 silly audit   chownr: [ '1.1.4' ],
+33 silly audit   'client-only': [ '0.0.1' ],
+33 silly audit   csstype: [ '3.2.3' ],
+33 silly audit   'decompress-response': [ '6.0.0' ],
+33 silly audit   'deep-extend': [ '0.6.0' ],
+33 silly audit   'detect-libc': [ '2.1.2' ],
+33 silly audit   'drizzle-orm': [ '0.38.4' ],
+33 silly audit   'end-of-stream': [ '1.4.5' ],
+33 silly audit   'expand-template': [ '2.0.3' ],
+33 silly audit   'file-uri-to-path': [ '1.0.0' ],
+33 silly audit   'fs-constants': [ '1.0.0' ],
+33 silly audit   'github-from-package': [ '0.0.0' ],
+33 silly audit   ieee754: [ '1.2.1' ],
+33 silly audit   inherits: [ '2.0.4' ],
+33 silly audit   ini: [ '1.3.8' ],
+33 silly audit   'lucide-react': [ '0.468.0' ],
+33 silly audit   'mimic-response': [ '3.1.0' ],
+33 silly audit   minimist: [ '1.2.8' ],
+33 silly audit   'mkdirp-classic': [ '0.5.3' ],
+33 silly audit   nanoid: [ '3.3.19' ],
+33 silly audit   'napi-build-utils': [ '2.0.0' ],
+33 silly audit   next: [ '15.5.25' ],
+33 silly audit   'node-abi': [ '3.96.0' ],
+33 silly audit   once: [ '1.4.0' ],
+33 silly audit   'pdfjs-dist': [ '4.10.38' ],
+33 silly audit   picocolors: [ '1.1.1' ],
+33 silly audit   postcss: [ '8.4.31' ],
+33 silly audit   'prebuild-install': [ '7.1.3' ],
+33 silly audit   pump: [ '3.0.4' ],
+33 silly audit   rc: [ '1.2.8' ],
+33 silly audit   react: [ '19.3.0' ],
+33 silly audit   'react-dom': [ '19.3.0' ],
+33 silly audit   'readable-stream': [ '3.6.2' ],
+33 silly audit   'safe-buffer': [ '5.2.1' ],
+33 silly audit   scheduler: [ '0.28.0' ],
+33 silly audit   semver: [ '7.8.5' ],
+33 silly audit   sharp: [ '0.35.4' ],
+33 silly audit   'simple-concat': [ '1.0.1' ],
+33 silly audit   'simple-get': [ '4.0.1' ],
+33 silly audit   'source-map-js': [ '1.2.1' ],
+33 silly audit   string_decoder: [ '1.3.0' ],
+33 silly audit   'strip-json-comments': [ '2.0.1' ],
+33 silly audit   'styled-jsx': [ '5.1.6' ],
+33 silly audit   tslib: [ '2.8.1' ],
+33 silly audit   'tunnel-agent': [ '0.6.0' ],
+33 silly audit   'undici-types': [ '6.21.0' ],
+33 silly audit   'util-deprecate': [ '1.0.2' ],
+33 silly audit   wrappy: [ '1.0.2' ]
+33 silly audit }
+34 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 479ms
+35 timing auditReport:getReport Completed in 483ms
+36 silly audit report {
+36 silly audit report   'drizzle-orm': [
+36 silly audit report     {
+36 silly audit report       id: 1116251,
+36 silly audit report       url: 'https://github.com/advisories/GHSA-gpj5-g38j-94v9',
+36 silly audit report       title: 'Drizzle ORM has SQL injection via improperly escaped SQL identifiers',
+36 silly audit report       severity: 'high',
+36 silly audit report       vulnerable_versions: '<0.45.2',
+36 silly audit report       cwe: [Array],
+36 silly audit report       cvss: [Object]
+36 silly audit report     }
+36 silly audit report   ],
+36 silly audit report   postcss: [
+36 silly audit report     {
+36 silly audit report       id: 1130709,
+36 silly audit report       url: 'https://github.com/advisories/GHSA-fxqj-rqcc-2cmp',
+36 silly audit report       title: 'PostCSS: incomplete fix of GHSA-6g55-p6wh-862q — attacker-controlled sourceMappingURL reads arbitrary .map files when `from` is unset',
+36 silly audit report       severity: 'moderate',
+36 silly audit report       vulnerable_versions: '<=8.5.22',
+36 silly audit report       cwe: [Array],
+36 silly audit report       cvss: [Object]
+36 silly audit report     },
+36 silly audit report     {
+36 silly audit report       id: 1117015,
+36 silly audit report       url: 'https://github.com/advisories/GHSA-qx2v-qp2m-jg93',
+36 silly audit report       title: 'PostCSS has XSS via Unescaped </style> in its CSS Stringify Output',
+36 silly audit report       severity: 'moderate',
+36 silly audit report       vulnerable_versions: '<8.5.10',
+36 silly audit report       cwe: [Array],
+36 silly audit report       cvss: [Object]
+36 silly audit report     },
+36 silly audit report     {
+36 silly audit report       id: 1124252,
+36 silly audit report       url: 'https://github.com/advisories/GHSA-6g55-p6wh-862q',
+36 silly audit report       title: 'PostCSS: Arbitrary file read and information disclosure via attacker-controlled sourceMappingURL in CSS comments',
+36 silly audit report       severity: 'high',
+36 silly audit report       vulnerable_versions: '<=8.5.11',
+36 silly audit report       cwe: [Array],
+36 silly audit report       cvss: [Object]
+36 silly audit report     },
+36 silly audit report     {
+36 silly audit report       id: 1139510,
+36 silly audit report       url: 'https://github.com/advisories/GHSA-r28c-9q8g-f849',
+36 silly audit report       title: 'PostCSS: Path Traversal in Previous Source Map Auto-Loading (sourceMappingURL) leads to Arbitrary .map File Disclosure',
+36 silly audit report       severity: 'high',
+36 silly audit report       vulnerable_versions: '<=8.5.17',
+36 silly audit report       cwe: [Array],
+36 silly audit report       cvss: [Object]
+36 silly audit report     }
+36 silly audit report   ]
+36 silly audit report }
+37 timing metavuln:cache:get:security-advisory:drizzle-orm:/Nb+v90IduH9I/oY32TFP1Rek3Pyr4qeiqx1JjHll/Y7906EdpUtRqndFmPPzbkiX1H22IHNJjTCLn0V6+VqXA== Completed in 57ms
+38 timing metavuln:cache:get:security-advisory:postcss:685RVq5xScaqegAXk2BRJrsMaZmsz1d/volUoA67iVw3AvHhUlX03u+VPRrmo8iuObcSDvuZF+fuiOnLC9L1uA== Completed in 57ms
+39 timing metavuln:cache:get:security-advisory:postcss:CYQpgMxvTqXBVaZq1NAr4RIFkWLFCwyobLa0hEv7E4gMg411Yb94I7Uru51Ci3hUITmSGFK7DCDkX4TqzQYsaw== Completed in 58ms
+40 timing metavuln:cache:get:security-advisory:postcss:AESkqup7C9sLtHL0OzenAvihqmLzSTOW4+0zIkCCeUjI0qvgEu/UCFfVCIlWzUpfDq20KxUSH5Ru8h4LoxJKRA== Completed in 62ms
+41 timing metavuln:cache:get:security-advisory:postcss:vffDf5zeMAO2NG2g47VKaOSrYbOxy9RP7hONH+CZvut446KUCIkc3Fp1vXR3T1gMxB3d9F68wTGe2BUQF6ut/w== Completed in 60ms
+42 http fetch GET 200 https://registry.npmjs.org/drizzle-orm 249ms (cache revalidated)
+43 timing metavuln:packument:drizzle-orm Completed in 275ms
+44 timing metavuln:load:security-advisory:drizzle-orm:1116251 Completed in 4ms
+45 timing metavuln:calculate:security-advisory:drizzle-orm:1116251 Completed in 281ms
+46 http fetch GET 200 https://registry.npmjs.org/postcss 380ms (cache revalidated)
+47 timing metavuln:packument:postcss Completed in 383ms
+48 timing metavuln:load:security-advisory:postcss:1130709 Completed in 1ms
+49 timing metavuln:calculate:security-advisory:postcss:1130709 Completed in 385ms
+50 timing metavuln:load:security-advisory:postcss:1117015 Completed in 2ms
+51 timing metavuln:calculate:security-advisory:postcss:1117015 Completed in 386ms
+52 timing metavuln:load:security-advisory:postcss:1124252 Completed in 1ms
+53 timing metavuln:calculate:security-advisory:postcss:1124252 Completed in 386ms
+54 timing metavuln:load:security-advisory:postcss:1139510 Completed in 1ms
+55 timing metavuln:calculate:security-advisory:postcss:1139510 Completed in 387ms
+56 timing metavuln:cache:get:security-advisory:next:8RlZE+IBinmJoMk6uVcV95MAfxYTQeaA9Sha1X47EU6Yn2I1DpgEjVbSe9Dat8c1Oy+nk6MRHrCODNvFggnzeg== Completed in 27ms
+57 http fetch GET 200 https://registry.npmjs.org/next 457ms (cache revalidated)
+58 timing metavuln:packument:next Completed in 741ms
+59 timing metavuln:load:security-advisory:next:AESkqup7C9sLtHL0OzenAvihqmLzSTOW4+0zIkCCeUjI0qvgEu/UCFfVCIlWzUpfDq20KxUSH5Ru8h4LoxJKRA== Completed in 64ms
+60 timing metavuln:calculate:security-advisory:next:AESkqup7C9sLtHL0OzenAvihqmLzSTOW4+0zIkCCeUjI0qvgEu/UCFfVCIlWzUpfDq20KxUSH5Ru8h4LoxJKRA== Completed in 806ms
+61 timing auditReport:init Completed in 1277ms
+62 timing audit Completed in 1807ms
+63 timing command:audit Completed in 1844ms
+64 verbose exit 1
+65 timing npm Completed in 2258ms
+66 verbose code 1

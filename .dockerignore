@@ -1,0 +1,8 @@
+node_modules
+.next
+.npm-cache
+.env
+data/*.db
+data/*.db-*
+public/uploads
+/*-390.png

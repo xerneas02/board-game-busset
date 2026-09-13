@@ -1,0 +1,9 @@
+node_modules
+.next
+data/library.db
+data/*.db
+data/*.db-*
+public/uploads
+public/pdf.worker.mjs
+/*-390.png
+.env

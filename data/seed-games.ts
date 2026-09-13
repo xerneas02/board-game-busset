@@ -1,0 +1,37 @@
+export type SeedGame = { name: string; min: number; max: number; minutes?: number; difficulty?: number; rating?: number };
+
+// Collection familiale. Les durées restent des estimations et sont complétées par
+// la moyenne des parties réellement enregistrées dans l'application.
+export const seedGames: SeedGame[] = [
+  { name: "Catan", min: 3, max: 4, minutes: 75, difficulty: 2.28, rating: 4 },
+  { name: "Blokus", min: 2, max: 4, minutes: 25, difficulty: 1.73 },
+  { name: "Sequence", min: 2, max: 12, minutes: 30, difficulty: 1.31 },
+  { name: "Splendor", min: 2, max: 4, minutes: 30, difficulty: 1.77 },
+  { name: "7 Wonders", min: 3, max: 7, minutes: 40, difficulty: 2.32 },
+  { name: "7 Wonders Architects", min: 2, max: 7, minutes: 25, difficulty: 1.39 },
+  { name: "7 Wonders Dice", min: 2, max: 7, difficulty: 2.56 },
+  { name: "Les Aventuriers du Rail Europe", min: 2, max: 5, minutes: 60, difficulty: 1.92 },
+  { name: "Carcassonne", min: 2, max: 5, minutes: 45, difficulty: 1.88 },
+  { name: "Dixit", min: 3, max: 8, minutes: 30, difficulty: 1.19 },
+  { name: "Dixit Disney", min: 3, max: 6, minutes: 30, difficulty: 1.09 },
+  { name: "Kamisado", min: 2, max: 2, difficulty: 2.36 },
+  { name: "Century", min: 2, max: 5, minutes: 45, difficulty: 1.8 },
+  { name: "Moustache", min: 3, max: 6, difficulty: 1.38 },
+  { name: "Trio", min: 3, max: 6, minutes: 15, difficulty: 1.08 },
+  { name: "Jungo", min: 3, max: 5, difficulty: 1.14 },
+  { name: "It's a Wonderful World", min: 1, max: 5, minutes: 45, difficulty: 2.32 },
+  { name: "Oriflamme", min: 3, max: 5, minutes: 20, difficulty: 1.69 },
+  { name: "Skyjo Action", min: 2, max: 8, minutes: 30, difficulty: 1.17 },
+  { name: "Yams", min: 2, max: 8, minutes: 20, difficulty: 1.17 },
+  { name: "421", min: 2, max: 8, minutes: 20, difficulty: 1 },
+  { name: "10 000", min: 2, max: 8, minutes: 25, difficulty: 1.1 },
+  { name: "Las Vegas", min: 2, max: 5, minutes: 30, difficulty: 1.17 },
+  { name: "Coinche", min: 4, max: 4, minutes: 45, difficulty: 3 },
+  { name: "Tarot", min: 3, max: 5, minutes: 60, difficulty: 2.53 },
+  { name: "Whist", min: 3, max: 6, minutes: 45, difficulty: 1.98 },
+  { name: "Palet breton", min: 2, max: 4, minutes: 30, difficulty: 1.2 },
+  { name: "Jeu de la grenouille", min: 1, max: 8, minutes: 15, difficulty: 1.1 },
+  { name: "Cryptide", min: 3, max: 5, minutes: 45, difficulty: 2.25 },
+  { name: "TTMC", min: 2, max: 16, minutes: 60, difficulty: 1.14 },
+  { name: "Codenames", min: 2, max: 8, minutes: 15, difficulty: 1.25 },
+];

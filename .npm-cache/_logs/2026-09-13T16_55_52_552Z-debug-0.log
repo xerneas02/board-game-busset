@@ -1,0 +1,208 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.2.0
+2 info using node@v21.1.0
+3 timing npm:load:whichnode Completed in 3ms
+4 timing config:load:defaults Completed in 3ms
+5 timing config:load:file:C:\Program Files\nodejs\node_modules\npm\npmrc Completed in 5ms
+6 timing config:load:builtin Completed in 6ms
+7 timing config:load:cli Completed in 2ms
+8 timing config:load:env Completed in 0ms
+9 timing config:load:file:D:\Programation\Python\board-game-busset\.npmrc Completed in 0ms
+10 timing config:load:project Completed in 1ms
+11 timing config:load:file:C:\Users\mathi\.npmrc Completed in 0ms
+12 timing config:load:user Completed in 0ms
+13 timing config:load:file:C:\Users\mathi\AppData\Roaming\npm\etc\npmrc Completed in 0ms
+14 timing config:load:global Completed in 0ms
+15 timing config:load:setEnvs Completed in 1ms
+16 timing config:load Completed in 16ms
+17 timing npm:load:configload Completed in 16ms
+18 timing config:load:flatten Completed in 2ms
+19 timing npm:load:mkdirpcache Completed in 1ms
+20 timing npm:load:mkdirplogs Completed in 0ms
+21 verbose title npm audit
+22 verbose argv "audit" "--json" "--cache" ".npm-cache"
+23 timing npm:load:setTitle Completed in 1ms
+24 timing npm:load:display Completed in 0ms
+25 verbose logfile logs-max:10 dir:D:\Programation\Python\board-game-busset\.npm-cache\_logs\2026-09-13T16_55_52_552Z-
+26 verbose logfile D:\Programation\Python\board-game-busset\.npm-cache\_logs\2026-09-13T16_55_52_552Z-debug-0.log
+27 timing npm:load:logFile Completed in 11ms
+28 timing npm:load:timers Completed in 0ms
+29 timing npm:load:configScope Completed in 0ms
+30 timing npm:load Completed in 64ms
+31 timing arborist:ctor Completed in 1ms
+32 silly logfile start cleaning logs, removing 1 files
+33 silly logfile done cleaning log files
+34 silly audit bulk request {
+34 silly audit   '@emnapi/runtime': [ '1.11.3' ],
+34 silly audit   '@esbuild/aix-ppc64': [ '0.28.2' ],
+34 silly audit   '@esbuild/android-arm': [ '0.28.2' ],
+34 silly audit   '@esbuild/android-arm64': [ '0.28.2' ],
+34 silly audit   '@esbuild/android-x64': [ '0.28.2' ],
+34 silly audit   '@esbuild/darwin-arm64': [ '0.28.2' ],
+34 silly audit   '@esbuild/darwin-x64': [ '0.28.2' ],
+34 silly audit   '@esbuild/freebsd-arm64': [ '0.28.2' ],
+34 silly audit   '@esbuild/freebsd-x64': [ '0.28.2' ],
+34 silly audit   '@esbuild/linux-arm': [ '0.28.2' ],
+34 silly audit   '@esbuild/linux-arm64': [ '0.28.2' ],
+34 silly audit   '@esbuild/linux-ia32': [ '0.28.2' ],
+34 silly audit   '@esbuild/linux-loong64': [ '0.28.2' ],
+34 silly audit   '@esbuild/linux-mips64el': [ '0.28.2' ],
+34 silly audit   '@esbuild/linux-ppc64': [ '0.28.2' ],
+34 silly audit   '@esbuild/linux-riscv64': [ '0.28.2' ],
+34 silly audit   '@esbuild/linux-s390x': [ '0.28.2' ],
+34 silly audit   '@esbuild/linux-x64': [ '0.28.2' ],
+34 silly audit   '@esbuild/netbsd-arm64': [ '0.28.2' ],
+34 silly audit   '@esbuild/netbsd-x64': [ '0.28.2' ],
+34 silly audit   '@esbuild/openbsd-arm64': [ '0.28.2' ],
+34 silly audit   '@esbuild/openbsd-x64': [ '0.28.2' ],
+34 silly audit   '@esbuild/openharmony-arm64': [ '0.28.2' ],
+34 silly audit   '@esbuild/sunos-x64': [ '0.28.2' ],
+34 silly audit   '@esbuild/win32-arm64': [ '0.28.2' ],
+34 silly audit   '@esbuild/win32-ia32': [ '0.28.2' ],
+34 silly audit   '@esbuild/win32-x64': [ '0.28.2' ],
+34 silly audit   '@img/colour': [ '1.1.0' ],
+34 silly audit   '@img/sharp-darwin-arm64': [ '0.35.4' ],
+34 silly audit   '@img/sharp-darwin-x64': [ '0.35.4' ],
+34 silly audit   '@img/sharp-freebsd-wasm32': [ '0.35.4' ],
+34 silly audit   '@img/sharp-libvips-darwin-arm64': [ '1.3.3' ],
+34 silly audit   '@img/sharp-libvips-darwin-x64': [ '1.3.3' ],
+34 silly audit   '@img/sharp-libvips-linux-arm': [ '1.3.3' ],
+34 silly audit   '@img/sharp-libvips-linux-arm64': [ '1.3.3' ],
+34 silly audit   '@img/sharp-libvips-linux-ppc64': [ '1.3.3' ],
+34 silly audit   '@img/sharp-libvips-linux-riscv64': [ '1.3.3' ],
+34 silly audit   '@img/sharp-libvips-linux-s390x': [ '1.3.3' ],
+34 silly audit   '@img/sharp-libvips-linux-x64': [ '1.3.3' ],
+34 silly audit   '@img/sharp-libvips-linuxmusl-arm64': [ '1.3.3' ],
+34 silly audit   '@img/sharp-libvips-linuxmusl-x64': [ '1.3.3' ],
+34 silly audit   '@img/sharp-linux-arm': [ '0.35.4' ],
+34 silly audit   '@img/sharp-linux-arm64': [ '0.35.4' ],
+34 silly audit   '@img/sharp-linux-ppc64': [ '0.35.4' ],
+34 silly audit   '@img/sharp-linux-riscv64': [ '0.35.4' ],
+34 silly audit   '@img/sharp-linux-s390x': [ '0.35.4' ],
+34 silly audit   '@img/sharp-linux-x64': [ '0.35.4' ],
+34 silly audit   '@img/sharp-linuxmusl-arm64': [ '0.35.4' ],
+34 silly audit   '@img/sharp-linuxmusl-x64': [ '0.35.4' ],
+34 silly audit   '@img/sharp-wasm32': [ '0.35.4' ],
+34 silly audit   '@img/sharp-webcontainers-wasm32': [ '0.35.4' ],
+34 silly audit   '@img/sharp-win32-arm64': [ '0.35.4' ],
+34 silly audit   '@img/sharp-win32-ia32': [ '0.35.4' ],
+34 silly audit   '@img/sharp-win32-x64': [ '0.35.4' ],
+34 silly audit   '@napi-rs/canvas': [ '0.1.100' ],
+34 silly audit   '@napi-rs/canvas-android-arm64': [ '0.1.100' ],
+34 silly audit   '@napi-rs/canvas-darwin-arm64': [ '0.1.100' ],
+34 silly audit   '@napi-rs/canvas-darwin-x64': [ '0.1.100' ],
+34 silly audit   '@napi-rs/canvas-linux-arm-gnueabihf': [ '0.1.100' ],
+34 silly audit   '@napi-rs/canvas-linux-arm64-gnu': [ '0.1.100' ],
+34 silly audit   '@napi-rs/canvas-linux-arm64-musl': [ '0.1.100' ],
+34 silly audit   '@napi-rs/canvas-linux-riscv64-gnu': [ '0.1.100' ],
+34 silly audit   '@napi-rs/canvas-linux-x64-gnu': [ '0.1.100' ],
+34 silly audit   '@napi-rs/canvas-linux-x64-musl': [ '0.1.100' ],
+34 silly audit   '@napi-rs/canvas-win32-arm64-msvc': [ '0.1.100' ],
+34 silly audit   '@napi-rs/canvas-win32-x64-msvc': [ '0.1.100' ],
+34 silly audit   '@next/env': [ '16.3.5' ],
+34 silly audit   '@next/swc-darwin-arm64': [ '16.3.5' ],
+34 silly audit   '@next/swc-darwin-x64': [ '16.3.5' ],
+34 silly audit   '@next/swc-linux-arm64-gnu': [ '16.3.5' ],
+34 silly audit   '@next/swc-linux-arm64-musl': [ '16.3.5' ],
+34 silly audit   '@next/swc-linux-x64-gnu': [ '16.3.5' ],
+34 silly audit   '@next/swc-linux-x64-musl': [ '16.3.5' ],
+34 silly audit   '@next/swc-win32-arm64-msvc': [ '16.3.5' ],
+34 silly audit   '@next/swc-win32-x64-msvc': [ '16.3.5' ],
+34 silly audit   '@puppeteer/browsers': [ '3.2.2' ],
+34 silly audit   '@swc/helpers': [ '0.5.23' ],
+34 silly audit   '@types/better-sqlite3': [ '7.6.13' ],
+34 silly audit   '@types/node': [ '22.20.2' ],
+34 silly audit   '@types/react': [ '19.3.0' ],
+34 silly audit   'ansi-regex': [ '6.3.0' ],
+34 silly audit   'ansi-styles': [ '6.2.3' ],
+34 silly audit   'base64-js': [ '1.5.1' ],
+34 silly audit   'baseline-browser-mapping': [ '2.11.23' ],
+34 silly audit   'better-sqlite3': [ '11.10.0' ],
+34 silly audit   bindings: [ '1.5.0' ],
+34 silly audit   bl: [ '4.1.0' ],
+34 silly audit   buffer: [ '5.7.1' ],
+34 silly audit   'caniuse-lite': [ '1.0.30001810' ],
+34 silly audit   chownr: [ '1.1.4' ],
+34 silly audit   'chromium-bidi': [ '17.0.2' ],
+34 silly audit   'client-only': [ '0.0.1' ],
+34 silly audit   cliui: [ '9.0.1' ],
+34 silly audit   'string-width': [ '7.2.0', '8.2.2' ],
+34 silly audit   csstype: [ '3.2.3' ],
+34 silly audit   'decompress-response': [ '6.0.0' ],
+34 silly audit   'deep-extend': [ '0.6.0' ],
+34 silly audit   'detect-libc': [ '2.1.2' ],
+34 silly audit   'devtools-protocol': [ '0.0.1666840' ],
+34 silly audit   'drizzle-orm': [ '0.45.2' ],
+34 silly audit   'emoji-regex': [ '10.6.0' ],
+34 silly audit   'end-of-stream': [ '1.4.5' ],
+34 silly audit   esbuild: [ '0.28.2' ],
+34 silly audit   escalade: [ '3.2.0' ],
+34 silly audit   'expand-template': [ '2.0.3' ],
+34 silly audit   'file-uri-to-path': [ '1.0.0' ],
+34 silly audit   'fs-constants': [ '1.0.0' ],
+34 silly audit   fsevents: [ '2.3.3' ],
+34 silly audit   'get-caller-file': [ '2.0.5' ],
+34 silly audit   'get-east-asian-width': [ '1.6.0' ],
+34 silly audit   'github-from-package': [ '0.0.0' ],
+34 silly audit   ieee754: [ '1.2.1' ],
+34 silly audit   inherits: [ '2.0.4' ],
+34 silly audit   ini: [ '1.3.8' ],
+34 silly audit   'lucide-react': [ '0.468.0' ],
+34 silly audit   'mimic-response': [ '3.1.0' ],
+34 silly audit   minimist: [ '1.2.8' ],
+34 silly audit   mitt: [ '3.0.1' ],
+34 silly audit   'mkdirp-classic': [ '0.5.3' ],
+34 silly audit   'modern-tar': [ '0.8.5' ],
+34 silly audit   nanoid: [ '3.3.19' ],
+34 silly audit   'napi-build-utils': [ '2.0.0' ],
+34 silly audit   next: [ '16.3.5' ],
+34 silly audit   'node-abi': [ '3.96.0' ],
+34 silly audit   once: [ '1.4.0' ],
+34 silly audit   'pdfjs-dist': [ '4.10.38' ],
+34 silly audit   picocolors: [ '1.1.1' ],
+34 silly audit   postcss: [ '8.5.23' ],
+34 silly audit   'prebuild-install': [ '7.1.3' ],
+34 silly audit   pump: [ '3.0.4' ],
+34 silly audit   'puppeteer-core': [ '25.10.0' ],
+34 silly audit   rc: [ '1.2.8' ],
+34 silly audit   react: [ '19.3.0' ],
+34 silly audit   'react-dom': [ '19.3.0' ],
+34 silly audit   'readable-stream': [ '3.6.2' ],
+34 silly audit   'safe-buffer': [ '5.2.1' ],
+34 silly audit   scheduler: [ '0.28.0' ],
+34 silly audit   semver: [ '7.8.5' ],
+34 silly audit   sharp: [ '0.35.4' ],
+34 silly audit   'simple-concat': [ '1.0.1' ],
+34 silly audit   'simple-get': [ '4.0.1' ],
+34 silly audit   'source-map-js': [ '1.2.1' ],
+34 silly audit   string_decoder: [ '1.3.0' ],
+34 silly audit   'strip-ansi': [ '7.2.0' ],
+34 silly audit   'strip-json-comments': [ '2.0.1' ],
+34 silly audit   'styled-jsx': [ '5.1.6' ],
+34 silly audit   'tar-fs': [ '2.1.5' ],
+34 silly audit   'tar-stream': [ '2.2.0' ],
+34 silly audit   tslib: [ '2.8.1' ],
+34 silly audit   tsx: [ '4.23.13' ],
+34 silly audit   'tunnel-agent': [ '0.6.0' ],
+34 silly audit   'typed-query-selector': [ '2.12.2' ],
+34 silly audit   typescript: [ '5.9.3' ],
+34 silly audit   'undici-types': [ '6.21.0' ],
+34 silly audit   'util-deprecate': [ '1.0.2' ],
+34 silly audit   'webdriver-bidi-protocol': [ '0.4.3' ],
+34 silly audit   'wrap-ansi': [ '9.0.2' ],
+34 silly audit   wrappy: [ '1.0.2' ],
+34 silly audit   ws: [ '8.21.3' ],
+34 silly audit   y18n: [ '5.0.8' ],
+34 silly audit   yargs: [ '18.1.0' ],
+34 silly audit   'yargs-parser': [ '22.0.0' ],
+34 silly audit   zod: [ '3.25.76' ]
+34 silly audit }
+35 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 598ms
+36 timing auditReport:getReport Completed in 603ms
+37 silly audit report {}
+38 timing auditReport:init Completed in 0ms
+39 timing audit Completed in 678ms
+40 timing command:audit Completed in 682ms
+41 verbose exit 0
+42 timing npm Completed in 1302ms
+43 info ok

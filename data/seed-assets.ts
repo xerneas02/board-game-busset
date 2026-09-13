@@ -1,0 +1,36 @@
+// Covers come from publisher or retailer product images. Replace any edition with a photo of your own box from the game editor.
+// Rules are links to publisher-hosted resources; copyrighted manuals are not copied into the seed.
+export const seedAssets: Record<string,{cover?:string;rules?:string}> = {
+  "Catan": {cover:"https://www.la-boutique-militante.com/9633-medium_default/les-colons-de-catane-catane-catan-base-vf-le-grand-classique-version-2020.jpg",rules:"https://www.catan.com/understand-catan/game-rules"},
+  "Blokus": {cover:"https://www.kidstuff.com.au/cdn/shop/products/BJV44_IP__06698.jpg?v=1676897500",rules:"https://service.mattel.com/us/productDetail.aspx?prodno=X3128&siteid=27"},
+  "Sequence": {cover:"https://toysrus.com.au/cdn/shop/files/ACA600062-3.png?v=1763699964&width=416",rules:"https://www.jaxgames.com/sequence-game-rules/"},
+  "Splendor": {cover:"https://cdn.svc.asmodee.net/production-asmodeeca/uploads/image-converter/2022/01/SCSPL01FREN-SPLENDOR-ML-3D_LEFT.webp",rules:"https://www.spacecowboys.fr/splendor/details"},
+  "7 Wonders": {cover:"https://cdn.svc.asmodee.net/production-asmodeebe/uploads/image-converter/2022/01/FR-7_WONDERS-R-1024x1024.webp",rules:"https://www.rprod.com/fr/games/7-wonders"},
+  "7 Wonders Architects": {cover:"https://cdn.svc.asmodee.net/production-asmodeeit/uploads/image-converter/2022/09/7-wonders_architects_BOX.webp",rules:"https://www.rprod.com/fr/games/7-wonders-architects"},
+  "7 Wonders Dice": {cover:"https://cdn2.philibertnet.com/841486-thickbox_default/7-wonders-dice.jpg",rules:"https://www.rprod.com/fr/games/7-wonders-dice"},
+  "Les Aventuriers du Rail Europe": {cover:"https://lesamisludiques.com/1355-thickbox_default/days-of-wonder-les-aventuriers-du-rail-europe-824968717820.jpg",rules:"https://www.daysofwonder.com/fr/game/les-aventuriers-du-rail-europe/"},
+  "Carcassonne": {cover:"https://cdn.svc.asmodee.net/production-asmodeeca/uploads/2023/10/ZM7810-CARCASSONNE-EN-3D_LEFT-1024x1024.png",rules:"https://www.zmangames.com/game/carcassonne/"},
+  "Dixit": {cover:"https://cdn.svc.asmodee.net/production-asmodeebe/uploads/image-converter/2022/01/ML-DIXIT-R-1024x1024.webp",rules:"https://www.libellud.com/nos-jeux/dixit/"},
+  "Dixit Disney": {cover:"https://cdn.svc.asmodee.net/production-asmodeeca/uploads/image-converter/2023/07/DIXIT_DISNEY_Box_FR_L.webp",rules:"https://www.libellud.com/ressources/dixit-disney/"},
+  "Kamisado": {cover:"https://static.wixstatic.com/media/188a58_81d59886cf104220a2f689c8dc642d09~mv2.png/v1/fill/w_933%2Ch_1036%2Cal_c%2Cq_90%2Cenc_avif%2Cquality_auto/188a58_81d59886cf104220a2f689c8dc642d09~mv2.png",rules:"https://static.fnac-static.com/multimedia/PT/pdf/4260071876911.pdf"},
+  "Century": {cover:"https://cdn2.philibertnet.com/487314-thickbox_default/century-la-route-des-epices.jpg",rules:"https://www.nextmove-games.com/century/century-la-route-des-epices/"},
+  "Moustache": {cover:"https://cdn1.philibertnet.com/768458-thickbox_default/moustache-3760268310644.jpg",rules:"https://media.play-in.com/pdf/rules_games/moustache_fr.pdf"},
+  "Trio": {cover:"https://latelierdesjeux.com/cdn/shop/products/trio-jeu-de-societe-484420.webp?v=1761123702",rules:"https://www.cocktailgames.com/wp-content/uploads/2022/11/trio_regles_BD.pdf"},
+  "Jungo": {cover:"https://cdn.svc.asmodee.net/production-asmodeebe/uploads/image-converter/2025/02/Jungo_3D_gauche.webp",rules:"https://www.cocktailgames.com/wp-content/uploads/2024/06/regle_jungo_0424_v11.pdf"},
+  "It's a Wonderful World": {cover:"https://www.ludum.fr/47545-large_default/it-s-a-wonderful-world.jpg",rules:"https://www.laboitedejeu.fr/ressources-iww/"},
+  "Oriflamme": {cover:"https://www.agorajeux.com/17262-large_default/oriflamme.jpg",rules:"https://studio-h-games.com/rules/Oriflamme/%5BOriflamme%5D_Rules_FR.pdf"},
+  "Skyjo Action": {cover:"https://www.hiveworld.de/media/e9/ac/b8/1689087550/SkyjoAction-7012.jpg?ts=1725485061",rules:"https://magilano.com/en/pages/download"},
+  // Traditional games have regional/family variants. These are reference rules, editable in each game's form.
+  "Yams": {rules:"https://fr.wikipedia.org/wiki/Yahtzee"},
+  "421": {rules:"https://fr.wikipedia.org/wiki/421_(jeu)"},
+  "10 000": {rules:"https://fr.wikipedia.org/wiki/10_000_(jeu)"},
+  "Las Vegas": {rules:"https://www.ravensburger.fr/spieleanleitungen/ecm/Spielanleitungen/26745_Las_Vegas_00.pdf"},
+  "Coinche": {rules:"https://www.ffbelote.org/regles-coinche/"},
+  "Tarot": {rules:"https://www.fftarot.fr/assets/documents/R-RO201206.pdf"},
+  "Whist": {rules:"https://fr.wikipedia.org/wiki/Whist"},
+  "Palet breton": {rules:"https://fr.wikipedia.org/wiki/Palet_sur_planche"},
+  "Jeu de la grenouille": {rules:"https://www.falsab.com/jeu/jeu_grenouille/"},
+  "Cryptide": {rules:"https://www.origames.fr/produit/cryptide/"},
+  "TTMC": {rules:"https://www.pixiegames.fr/party-games/154-ttmc-tu-te-mets-combien--3760425810215.html"},
+  "Codenames": {rules:"https://iello.fr/wp-content/uploads/2025/08/Codenames_Nouvelle_Edition_Rulebook_FR_Light.pdf"}
+};

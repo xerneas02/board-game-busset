@@ -1,0 +1,754 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.2.0
+2 info using node@v21.1.0
+3 timing npm:load:whichnode Completed in 2ms
+4 timing config:load:defaults Completed in 3ms
+5 timing config:load:file:C:\Program Files\nodejs\node_modules\npm\npmrc Completed in 4ms
+6 timing config:load:builtin Completed in 4ms
+7 timing config:load:cli Completed in 2ms
+8 timing config:load:env Completed in 0ms
+9 timing config:load:file:D:\Programation\Python\board-game-busset\.npmrc Completed in 0ms
+10 timing config:load:project Completed in 2ms
+11 timing config:load:file:C:\Users\mathi\.npmrc Completed in 0ms
+12 timing config:load:user Completed in 0ms
+13 timing config:load:file:C:\Users\mathi\AppData\Roaming\npm\etc\npmrc Completed in 0ms
+14 timing config:load:global Completed in 0ms
+15 timing config:load:setEnvs Completed in 1ms
+16 timing config:load Completed in 13ms
+17 timing npm:load:configload Completed in 13ms
+18 timing config:load:flatten Completed in 2ms
+19 timing npm:load:mkdirpcache Completed in 0ms
+20 timing npm:load:mkdirplogs Completed in 1ms
+21 verbose title npm install pdfjs-dist@4.10.38
+22 verbose argv "install" "pdfjs-dist@4.10.38" "--cache" ".npm-cache"
+23 timing npm:load:setTitle Completed in 1ms
+24 timing npm:load:display Completed in 0ms
+25 verbose logfile logs-max:10 dir:D:\Programation\Python\board-game-busset\.npm-cache\_logs\2026-09-13T15_51_56_258Z-
+26 verbose logfile D:\Programation\Python\board-game-busset\.npm-cache\_logs\2026-09-13T15_51_56_258Z-debug-0.log
+27 timing npm:load:logFile Completed in 10ms
+28 timing npm:load:timers Completed in 0ms
+29 timing npm:load:configScope Completed in 0ms
+30 timing npm:load Completed in 60ms
+31 timing arborist:ctor Completed in 1ms
+32 silly logfile done cleaning log files
+33 timing idealTree:init Completed in 47ms
+34 timing idealTree:userRequests Completed in 1ms
+35 silly idealTree buildDeps
+36 silly fetch manifest pdfjs-dist@4.10.38
+37 verbose shrinkwrap failed to load node_modules/.package-lock.json missing from node_modules: node_modules/@emnapi/runtime
+38 http fetch GET 200 https://registry.npmjs.org/pdfjs-dist 550ms (cache miss)
+39 silly placeDep ROOT pdfjs-dist@4.10.38 OK for: sous-lescalier@1.0.0 want: 4.10.38
+40 silly fetch manifest @napi-rs/canvas@^0.1.65
+41 http fetch GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas 298ms (cache miss)
+42 timing idealTree:#root Completed in 868ms
+43 silly placeDep ROOT @napi-rs/canvas@0.1.100 OK for: pdfjs-dist@4.10.38 want: ^0.1.65
+44 silly fetch manifest @napi-rs/canvas-darwin-x64@0.1.100
+45 silly fetch manifest @napi-rs/canvas-darwin-arm64@0.1.100
+46 silly fetch manifest @napi-rs/canvas-android-arm64@0.1.100
+47 silly fetch manifest @napi-rs/canvas-linux-x64-gnu@0.1.100
+48 silly fetch manifest @napi-rs/canvas-linux-x64-musl@0.1.100
+49 silly fetch manifest @napi-rs/canvas-win32-x64-msvc@0.1.100
+50 silly fetch manifest @napi-rs/canvas-linux-arm64-gnu@0.1.100
+51 silly fetch manifest @napi-rs/canvas-linux-arm64-musl@0.1.100
+52 silly fetch manifest @napi-rs/canvas-win32-arm64-msvc@0.1.100
+53 silly fetch manifest @napi-rs/canvas-linux-riscv64-gnu@0.1.100
+54 silly fetch manifest @napi-rs/canvas-linux-arm-gnueabihf@0.1.100
+55 http fetch GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-win32-arm64-msvc 289ms (cache miss)
+56 http fetch GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-win32-x64-msvc 476ms (cache miss)
+57 http fetch GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-linux-x64-musl 498ms (cache miss)
+58 http fetch GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-darwin-arm64 504ms (cache miss)
+59 http fetch GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-android-arm64 661ms (cache miss)
+60 http fetch GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-linux-arm64-gnu 668ms (cache miss)
+61 http fetch GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-linux-arm64-musl 669ms (cache miss)
+62 http fetch GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-linux-x64-gnu 675ms (cache miss)
+63 http fetch GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-linux-arm-gnueabihf 718ms (cache miss)
+64 http fetch GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-darwin-x64 1298ms (cache miss)
+65 http fetch GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-linux-riscv64-gnu 1476ms (cache miss)
+66 timing idealTree:node_modules/pdfjs-dist Completed in 1483ms
+67 silly placeDep ROOT @napi-rs/canvas-android-arm64@0.1.100 OK for: @napi-rs/canvas@0.1.100 want: 0.1.100
+68 silly placeDep ROOT @napi-rs/canvas-darwin-arm64@0.1.100 OK for: @napi-rs/canvas@0.1.100 want: 0.1.100
+69 silly placeDep ROOT @napi-rs/canvas-darwin-x64@0.1.100 OK for: @napi-rs/canvas@0.1.100 want: 0.1.100
+70 silly placeDep ROOT @napi-rs/canvas-linux-arm-gnueabihf@0.1.100 OK for: @napi-rs/canvas@0.1.100 want: 0.1.100
+71 silly placeDep ROOT @napi-rs/canvas-linux-arm64-gnu@0.1.100 OK for: @napi-rs/canvas@0.1.100 want: 0.1.100
+72 silly placeDep ROOT @napi-rs/canvas-linux-arm64-musl@0.1.100 OK for: @napi-rs/canvas@0.1.100 want: 0.1.100
+73 silly placeDep ROOT @napi-rs/canvas-linux-riscv64-gnu@0.1.100 OK for: @napi-rs/canvas@0.1.100 want: 0.1.100
+74 silly placeDep ROOT @napi-rs/canvas-linux-x64-gnu@0.1.100 OK for: @napi-rs/canvas@0.1.100 want: 0.1.100
+75 silly placeDep ROOT @napi-rs/canvas-linux-x64-musl@0.1.100 OK for: @napi-rs/canvas@0.1.100 want: 0.1.100
+76 silly placeDep ROOT @napi-rs/canvas-win32-arm64-msvc@0.1.100 OK for: @napi-rs/canvas@0.1.100 want: 0.1.100
+77 silly placeDep ROOT @napi-rs/canvas-win32-x64-msvc@0.1.100 OK for: @napi-rs/canvas@0.1.100 want: 0.1.100
+78 timing idealTree:node_modules/@napi-rs/canvas Completed in 25ms
+79 timing idealTree:node_modules/@napi-rs/canvas-android-arm64 Completed in 0ms
+80 timing idealTree:node_modules/@napi-rs/canvas-darwin-arm64 Completed in 0ms
+81 timing idealTree:node_modules/@napi-rs/canvas-darwin-x64 Completed in 0ms
+82 timing idealTree:node_modules/@napi-rs/canvas-linux-arm-gnueabihf Completed in 0ms
+83 timing idealTree:node_modules/@napi-rs/canvas-linux-arm64-gnu Completed in 0ms
+84 timing idealTree:node_modules/@napi-rs/canvas-linux-arm64-musl Completed in 0ms
+85 timing idealTree:node_modules/@napi-rs/canvas-linux-riscv64-gnu Completed in 0ms
+86 timing idealTree:node_modules/@napi-rs/canvas-linux-x64-gnu Completed in 0ms
+87 timing idealTree:node_modules/@napi-rs/canvas-linux-x64-musl Completed in 0ms
+88 timing idealTree:node_modules/@napi-rs/canvas-win32-arm64-msvc Completed in 0ms
+89 timing idealTree:node_modules/@napi-rs/canvas-win32-x64-msvc Completed in 0ms
+90 timing idealTree:buildDeps Completed in 2379ms
+91 timing idealTree:fixDepFlags Completed in 2ms
+92 timing idealTree Completed in 2430ms
+93 timing reify:loadTrees Completed in 2431ms
+94 timing reify:diffTrees Completed in 7ms
+95 silly reify moves {}
+96 timing reify:retireShallow Completed in 1ms
+97 timing reify:createSparse Completed in 8ms
+98 timing reify:loadBundles Completed in 0ms
+99 silly audit bulk request {
+99 silly audit   '@emnapi/runtime': [ '1.11.3' ],
+99 silly audit   '@esbuild/aix-ppc64': [ '0.28.2' ],
+99 silly audit   '@esbuild/android-arm': [ '0.28.2' ],
+99 silly audit   '@esbuild/android-arm64': [ '0.28.2' ],
+99 silly audit   '@esbuild/android-x64': [ '0.28.2' ],
+99 silly audit   '@esbuild/darwin-arm64': [ '0.28.2' ],
+99 silly audit   '@esbuild/darwin-x64': [ '0.28.2' ],
+99 silly audit   '@esbuild/freebsd-arm64': [ '0.28.2' ],
+99 silly audit   '@esbuild/freebsd-x64': [ '0.28.2' ],
+99 silly audit   '@esbuild/linux-arm': [ '0.28.2' ],
+99 silly audit   '@esbuild/linux-arm64': [ '0.28.2' ],
+99 silly audit   '@esbuild/linux-ia32': [ '0.28.2' ],
+99 silly audit   '@esbuild/linux-loong64': [ '0.28.2' ],
+99 silly audit   '@esbuild/linux-mips64el': [ '0.28.2' ],
+99 silly audit   '@esbuild/linux-ppc64': [ '0.28.2' ],
+99 silly audit   '@esbuild/linux-riscv64': [ '0.28.2' ],
+99 silly audit   '@esbuild/linux-s390x': [ '0.28.2' ],
+99 silly audit   '@esbuild/linux-x64': [ '0.28.2' ],
+99 silly audit   '@esbuild/netbsd-arm64': [ '0.28.2' ],
+99 silly audit   '@esbuild/netbsd-x64': [ '0.28.2' ],
+99 silly audit   '@esbuild/openbsd-arm64': [ '0.28.2' ],
+99 silly audit   '@esbuild/openbsd-x64': [ '0.28.2' ],
+99 silly audit   '@esbuild/openharmony-arm64': [ '0.28.2' ],
+99 silly audit   '@esbuild/sunos-x64': [ '0.28.2' ],
+99 silly audit   '@esbuild/win32-arm64': [ '0.28.2' ],
+99 silly audit   '@esbuild/win32-ia32': [ '0.28.2' ],
+99 silly audit   '@esbuild/win32-x64': [ '0.28.2' ],
+99 silly audit   '@img/colour': [ '1.1.0' ],
+99 silly audit   '@img/sharp-darwin-arm64': [ '0.35.4' ],
+99 silly audit   '@img/sharp-darwin-x64': [ '0.35.4' ],
+99 silly audit   '@img/sharp-freebsd-wasm32': [ '0.35.4' ],
+99 silly audit   '@img/sharp-libvips-darwin-arm64': [ '1.3.3' ],
+99 silly audit   '@img/sharp-libvips-darwin-x64': [ '1.3.3' ],
+99 silly audit   '@img/sharp-libvips-linux-arm': [ '1.3.3' ],
+99 silly audit   '@img/sharp-libvips-linux-arm64': [ '1.3.3' ],
+99 silly audit   '@img/sharp-libvips-linux-ppc64': [ '1.3.3' ],
+99 silly audit   '@img/sharp-libvips-linux-riscv64': [ '1.3.3' ],
+99 silly audit   '@img/sharp-libvips-linux-s390x': [ '1.3.3' ],
+99 silly audit   '@img/sharp-libvips-linux-x64': [ '1.3.3' ],
+99 silly audit   '@img/sharp-libvips-linuxmusl-arm64': [ '1.3.3' ],
+99 silly audit   '@img/sharp-libvips-linuxmusl-x64': [ '1.3.3' ],
+99 silly audit   '@img/sharp-linux-arm': [ '0.35.4' ],
+99 silly audit   '@img/sharp-linux-arm64': [ '0.35.4' ],
+99 silly audit   '@img/sharp-linux-ppc64': [ '0.35.4' ],
+99 silly audit   '@img/sharp-linux-riscv64': [ '0.35.4' ],
+99 silly audit   '@img/sharp-linux-s390x': [ '0.35.4' ],
+99 silly audit   '@img/sharp-linux-x64': [ '0.35.4' ],
+99 silly audit   '@img/sharp-linuxmusl-arm64': [ '0.35.4' ],
+99 silly audit   '@img/sharp-linuxmusl-x64': [ '0.35.4' ],
+99 silly audit   '@img/sharp-wasm32': [ '0.35.4' ],
+99 silly audit   '@img/sharp-webcontainers-wasm32': [ '0.35.4' ],
+99 silly audit   '@img/sharp-win32-arm64': [ '0.35.4' ],
+99 silly audit   '@img/sharp-win32-ia32': [ '0.35.4' ],
+99 silly audit   '@img/sharp-win32-x64': [ '0.35.4' ],
+99 silly audit   '@next/env': [ '15.5.25' ],
+99 silly audit   '@next/swc-darwin-arm64': [ '15.5.25' ],
+99 silly audit   '@next/swc-darwin-x64': [ '15.5.25' ],
+99 silly audit   '@next/swc-linux-arm64-gnu': [ '15.5.25' ],
+99 silly audit   '@next/swc-linux-arm64-musl': [ '15.5.25' ],
+99 silly audit   '@next/swc-linux-x64-gnu': [ '15.5.25' ],
+99 silly audit   '@next/swc-linux-x64-musl': [ '15.5.25' ],
+99 silly audit   '@next/swc-win32-arm64-msvc': [ '15.5.25' ],
+99 silly audit   '@next/swc-win32-x64-msvc': [ '15.5.25' ],
+99 silly audit   '@swc/helpers': [ '0.5.15' ],
+99 silly audit   '@types/better-sqlite3': [ '7.6.13' ],
+99 silly audit   '@types/node': [ '22.20.2' ],
+99 silly audit   '@types/react': [ '19.3.0' ],
+99 silly audit   'base64-js': [ '1.5.1' ],
+99 silly audit   'better-sqlite3': [ '11.10.0' ],
+99 silly audit   bindings: [ '1.5.0' ],
+99 silly audit   bl: [ '4.1.0' ],
+99 silly audit   buffer: [ '5.7.1' ],
+99 silly audit   'caniuse-lite': [ '1.0.30001810' ],
+99 silly audit   chownr: [ '1.1.4' ],
+99 silly audit   'client-only': [ '0.0.1' ],
+99 silly audit   csstype: [ '3.2.3' ],
+99 silly audit   'decompress-response': [ '6.0.0' ],
+99 silly audit   'deep-extend': [ '0.6.0' ],
+99 silly audit   'detect-libc': [ '2.1.2' ],
+99 silly audit   'drizzle-orm': [ '0.38.4' ],
+99 silly audit   'end-of-stream': [ '1.4.5' ],
+99 silly audit   esbuild: [ '0.28.2' ],
+99 silly audit   'expand-template': [ '2.0.3' ],
+99 silly audit   'file-uri-to-path': [ '1.0.0' ],
+99 silly audit   'fs-constants': [ '1.0.0' ],
+99 silly audit   fsevents: [ '2.3.3' ],
+99 silly audit   'github-from-package': [ '0.0.0' ],
+99 silly audit   ieee754: [ '1.2.1' ],
+99 silly audit   inherits: [ '2.0.4' ],
+99 silly audit   ini: [ '1.3.8' ],
+99 silly audit   'lucide-react': [ '0.468.0' ],
+99 silly audit   'mimic-response': [ '3.1.0' ],
+99 silly audit   minimist: [ '1.2.8' ],
+99 silly audit   'mkdirp-classic': [ '0.5.3' ],
+99 silly audit   nanoid: [ '3.3.19' ],
+99 silly audit   'napi-build-utils': [ '2.0.0' ],
+99 silly audit   next: [ '15.5.25' ],
+99 silly audit   'node-abi': [ '3.96.0' ],
+99 silly audit   once: [ '1.4.0' ],
+99 silly audit   picocolors: [ '1.1.1' ],
+99 silly audit   postcss: [ '8.4.31' ],
+99 silly audit   'prebuild-install': [ '7.1.3' ],
+99 silly audit   pump: [ '3.0.4' ],
+99 silly audit   rc: [ '1.2.8' ],
+99 silly audit   react: [ '19.3.0' ],
+99 silly audit   'react-dom': [ '19.3.0' ],
+99 silly audit   'readable-stream': [ '3.6.2' ],
+99 silly audit   'safe-buffer': [ '5.2.1' ],
+99 silly audit   scheduler: [ '0.28.0' ],
+99 silly audit   semver: [ '7.8.5' ],
+99 silly audit   sharp: [ '0.35.4' ],
+99 silly audit   'simple-concat': [ '1.0.1' ],
+99 silly audit   'simple-get': [ '4.0.1' ],
+99 silly audit   'source-map-js': [ '1.2.1' ],
+99 silly audit   string_decoder: [ '1.3.0' ],
+99 silly audit   'strip-json-comments': [ '2.0.1' ],
+99 silly audit   'styled-jsx': [ '5.1.6' ],
+99 silly audit   'tar-fs': [ '2.1.5' ],
+99 silly audit   'tar-stream': [ '2.2.0' ],
+99 silly audit   tslib: [ '2.8.1' ],
+99 silly audit   tsx: [ '4.23.13' ],
+99 silly audit   'tunnel-agent': [ '0.6.0' ],
+99 silly audit   typescript: [ '5.9.3' ],
+99 silly audit   'undici-types': [ '6.21.0' ],
+99 silly audit   'util-deprecate': [ '1.0.2' ],
+99 silly audit   wrappy: [ '1.0.2' ],
+99 silly audit   'pdfjs-dist': [ '4.10.38' ],
+99 silly audit   '@napi-rs/canvas': [ '0.1.100' ],
+99 silly audit   '@napi-rs/canvas-android-arm64': [ '0.1.100' ],
+99 silly audit   '@napi-rs/canvas-darwin-arm64': [ '0.1.100' ],
+99 silly audit   '@napi-rs/canvas-darwin-x64': [ '0.1.100' ],
+99 silly audit   '@napi-rs/canvas-linux-arm-gnueabihf': [ '0.1.100' ],
+99 silly audit   '@napi-rs/canvas-linux-arm64-gnu': [ '0.1.100' ],
+99 silly audit   '@napi-rs/canvas-linux-arm64-musl': [ '0.1.100' ],
+99 silly audit   '@napi-rs/canvas-linux-riscv64-gnu': [ '0.1.100' ],
+99 silly audit   '@napi-rs/canvas-linux-x64-gnu': [ '0.1.100' ],
+99 silly audit   '@napi-rs/canvas-linux-x64-musl': [ '0.1.100' ],
+99 silly audit   '@napi-rs/canvas-win32-arm64-msvc': [ '0.1.100' ],
+99 silly audit   '@napi-rs/canvas-win32-x64-msvc': [ '0.1.100' ]
+99 silly audit }
+100 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@napi-rs\canvas-win32-arm64-msvc
+101 silly reify mark deleted [
+101 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@napi-rs\\canvas-win32-arm64-msvc'
+101 silly reify ]
+102 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@napi-rs\canvas-linux-x64-musl
+103 silly reify mark deleted [
+103 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@napi-rs\\canvas-linux-x64-musl'
+103 silly reify ]
+104 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@napi-rs\canvas-linux-x64-gnu
+105 silly reify mark deleted [
+105 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@napi-rs\\canvas-linux-x64-gnu'
+105 silly reify ]
+106 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@napi-rs\canvas-linux-riscv64-gnu
+107 silly reify mark deleted [
+107 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@napi-rs\\canvas-linux-riscv64-gnu'
+107 silly reify ]
+108 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@napi-rs\canvas-linux-arm64-musl
+109 silly reify mark deleted [
+109 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@napi-rs\\canvas-linux-arm64-musl'
+109 silly reify ]
+110 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@napi-rs\canvas-linux-arm64-gnu
+111 silly reify mark deleted [
+111 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@napi-rs\\canvas-linux-arm64-gnu'
+111 silly reify ]
+112 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@napi-rs\canvas-linux-arm-gnueabihf
+113 silly reify mark deleted [
+113 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@napi-rs\\canvas-linux-arm-gnueabihf'
+113 silly reify ]
+114 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@napi-rs\canvas-darwin-x64
+115 silly reify mark deleted [
+115 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@napi-rs\\canvas-darwin-x64'
+115 silly reify ]
+116 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@napi-rs\canvas-darwin-arm64
+117 silly reify mark deleted [
+117 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@napi-rs\\canvas-darwin-arm64'
+117 silly reify ]
+118 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@napi-rs\canvas-android-arm64
+119 silly reify mark deleted [
+119 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@napi-rs\\canvas-android-arm64'
+119 silly reify ]
+120 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\fsevents
+121 silly reify mark deleted [
+121 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\fsevents'
+121 silly reify ]
+122 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@next\swc-win32-arm64-msvc
+123 silly reify mark deleted [
+123 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@next\\swc-win32-arm64-msvc'
+123 silly reify ]
+124 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@next\swc-linux-x64-musl
+125 silly reify mark deleted [
+125 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@next\\swc-linux-x64-musl'
+125 silly reify ]
+126 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@next\swc-linux-x64-gnu
+127 silly reify mark deleted [
+127 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@next\\swc-linux-x64-gnu'
+127 silly reify ]
+128 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@next\swc-linux-arm64-musl
+129 silly reify mark deleted [
+129 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@next\\swc-linux-arm64-musl'
+129 silly reify ]
+130 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@next\swc-linux-arm64-gnu
+131 silly reify mark deleted [
+131 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@next\\swc-linux-arm64-gnu'
+131 silly reify ]
+132 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@next\swc-darwin-x64
+133 silly reify mark deleted [
+133 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@next\\swc-darwin-x64'
+133 silly reify ]
+134 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@next\swc-darwin-arm64
+135 silly reify mark deleted [
+135 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@next\\swc-darwin-arm64'
+135 silly reify ]
+136 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@img\sharp-win32-ia32
+137 silly reify mark deleted [
+137 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@img\\sharp-win32-ia32'
+137 silly reify ]
+138 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@img\sharp-win32-arm64
+139 silly reify mark deleted [
+139 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@img\\sharp-win32-arm64'
+139 silly reify ]
+140 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@img\sharp-webcontainers-wasm32
+141 silly reify mark deleted [
+141 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@img\\sharp-webcontainers-wasm32'
+141 silly reify ]
+142 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@img\sharp-linuxmusl-x64
+143 silly reify mark deleted [
+143 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@img\\sharp-linuxmusl-x64'
+143 silly reify ]
+144 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@img\sharp-linuxmusl-arm64
+145 silly reify mark deleted [
+145 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@img\\sharp-linuxmusl-arm64'
+145 silly reify ]
+146 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@img\sharp-linux-x64
+147 silly reify mark deleted [
+147 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@img\\sharp-linux-x64'
+147 silly reify ]
+148 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@img\sharp-linux-s390x
+149 silly reify mark deleted [
+149 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@img\\sharp-linux-s390x'
+149 silly reify ]
+150 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@img\sharp-linux-riscv64
+151 silly reify mark deleted [
+151 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@img\\sharp-linux-riscv64'
+151 silly reify ]
+152 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@img\sharp-linux-ppc64
+153 silly reify mark deleted [
+153 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@img\\sharp-linux-ppc64'
+153 silly reify ]
+154 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@img\sharp-linux-arm64
+155 silly reify mark deleted [
+155 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@img\\sharp-linux-arm64'
+155 silly reify ]
+156 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@img\sharp-linux-arm
+157 silly reify mark deleted [
+157 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@img\\sharp-linux-arm'
+157 silly reify ]
+158 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@img\sharp-libvips-linuxmusl-x64
+159 silly reify mark deleted [
+159 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@img\\sharp-libvips-linuxmusl-x64'
+159 silly reify ]
+160 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@img\sharp-libvips-linuxmusl-arm64
+161 silly reify mark deleted [
+161 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@img\\sharp-libvips-linuxmusl-arm64'
+161 silly reify ]
+162 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@img\sharp-libvips-linux-x64
+163 silly reify mark deleted [
+163 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@img\\sharp-libvips-linux-x64'
+163 silly reify ]
+164 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@img\sharp-libvips-linux-s390x
+165 silly reify mark deleted [
+165 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@img\\sharp-libvips-linux-s390x'
+165 silly reify ]
+166 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@img\sharp-libvips-linux-riscv64
+167 silly reify mark deleted [
+167 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@img\\sharp-libvips-linux-riscv64'
+167 silly reify ]
+168 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@img\sharp-libvips-linux-ppc64
+169 silly reify mark deleted [
+169 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@img\\sharp-libvips-linux-ppc64'
+169 silly reify ]
+170 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@img\sharp-libvips-linux-arm64
+171 silly reify mark deleted [
+171 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@img\\sharp-libvips-linux-arm64'
+171 silly reify ]
+172 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@img\sharp-libvips-linux-arm
+173 silly reify mark deleted [
+173 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@img\\sharp-libvips-linux-arm'
+173 silly reify ]
+174 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@img\sharp-libvips-darwin-x64
+175 silly reify mark deleted [
+175 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@img\\sharp-libvips-darwin-x64'
+175 silly reify ]
+176 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@img\sharp-libvips-darwin-arm64
+177 silly reify mark deleted [
+177 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@img\\sharp-libvips-darwin-arm64'
+177 silly reify ]
+178 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@img\sharp-freebsd-wasm32
+179 silly reify mark deleted [
+179 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@img\\sharp-freebsd-wasm32'
+179 silly reify ]
+180 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@img\sharp-darwin-x64
+181 silly reify mark deleted [
+181 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@img\\sharp-darwin-x64'
+181 silly reify ]
+182 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@img\sharp-darwin-arm64
+183 silly reify mark deleted [
+183 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@img\\sharp-darwin-arm64'
+183 silly reify ]
+184 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@esbuild\win32-ia32
+185 silly reify mark deleted [
+185 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@esbuild\\win32-ia32'
+185 silly reify ]
+186 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@esbuild\win32-arm64
+187 silly reify mark deleted [
+187 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@esbuild\\win32-arm64'
+187 silly reify ]
+188 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@esbuild\sunos-x64
+189 silly reify mark deleted [
+189 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@esbuild\\sunos-x64'
+189 silly reify ]
+190 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@esbuild\openharmony-arm64
+191 silly reify mark deleted [
+191 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@esbuild\\openharmony-arm64'
+191 silly reify ]
+192 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@esbuild\openbsd-x64
+193 silly reify mark deleted [
+193 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@esbuild\\openbsd-x64'
+193 silly reify ]
+194 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@esbuild\openbsd-arm64
+195 silly reify mark deleted [
+195 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@esbuild\\openbsd-arm64'
+195 silly reify ]
+196 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@esbuild\netbsd-x64
+197 silly reify mark deleted [
+197 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@esbuild\\netbsd-x64'
+197 silly reify ]
+198 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@esbuild\netbsd-arm64
+199 silly reify mark deleted [
+199 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@esbuild\\netbsd-arm64'
+199 silly reify ]
+200 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@esbuild\linux-x64
+201 silly reify mark deleted [
+201 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@esbuild\\linux-x64'
+201 silly reify ]
+202 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@esbuild\linux-s390x
+203 silly reify mark deleted [
+203 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@esbuild\\linux-s390x'
+203 silly reify ]
+204 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@esbuild\linux-riscv64
+205 silly reify mark deleted [
+205 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@esbuild\\linux-riscv64'
+205 silly reify ]
+206 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@esbuild\linux-ppc64
+207 silly reify mark deleted [
+207 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@esbuild\\linux-ppc64'
+207 silly reify ]
+208 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@esbuild\linux-mips64el
+209 silly reify mark deleted [
+209 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@esbuild\\linux-mips64el'
+209 silly reify ]
+210 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@esbuild\linux-loong64
+211 silly reify mark deleted [
+211 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@esbuild\\linux-loong64'
+211 silly reify ]
+212 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@esbuild\linux-ia32
+213 silly reify mark deleted [
+213 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@esbuild\\linux-ia32'
+213 silly reify ]
+214 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@esbuild\linux-arm64
+215 silly reify mark deleted [
+215 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@esbuild\\linux-arm64'
+215 silly reify ]
+216 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@esbuild\linux-arm
+217 silly reify mark deleted [
+217 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@esbuild\\linux-arm'
+217 silly reify ]
+218 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@esbuild\freebsd-x64
+219 silly reify mark deleted [
+219 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@esbuild\\freebsd-x64'
+219 silly reify ]
+220 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@esbuild\freebsd-arm64
+221 silly reify mark deleted [
+221 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@esbuild\\freebsd-arm64'
+221 silly reify ]
+222 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@esbuild\darwin-x64
+223 silly reify mark deleted [
+223 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@esbuild\\darwin-x64'
+223 silly reify ]
+224 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@esbuild\darwin-arm64
+225 silly reify mark deleted [
+225 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@esbuild\\darwin-arm64'
+225 silly reify ]
+226 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@esbuild\android-x64
+227 silly reify mark deleted [
+227 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@esbuild\\android-x64'
+227 silly reify ]
+228 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@esbuild\android-arm64
+229 silly reify mark deleted [
+229 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@esbuild\\android-arm64'
+229 silly reify ]
+230 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@esbuild\android-arm
+231 silly reify mark deleted [
+231 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@esbuild\\android-arm'
+231 silly reify ]
+232 verbose reify failed optional dependency D:\Programation\Python\board-game-busset\node_modules\@esbuild\aix-ppc64
+233 silly reify mark deleted [
+233 silly reify   'D:\\Programation\\Python\\board-game-busset\\node_modules\\@esbuild\\aix-ppc64'
+233 silly reify ]
+234 timing reifyNode:node_modules/@napi-rs/canvas-win32-arm64-msvc Completed in 12ms
+235 timing reifyNode:node_modules/@napi-rs/canvas-linux-x64-musl Completed in 12ms
+236 timing reifyNode:node_modules/@napi-rs/canvas-linux-x64-gnu Completed in 12ms
+237 timing reifyNode:node_modules/@napi-rs/canvas-linux-riscv64-gnu Completed in 13ms
+238 timing reifyNode:node_modules/@napi-rs/canvas-linux-arm64-musl Completed in 13ms
+239 timing reifyNode:node_modules/@napi-rs/canvas-linux-arm64-gnu Completed in 13ms
+240 timing reifyNode:node_modules/@napi-rs/canvas-linux-arm-gnueabihf Completed in 13ms
+241 timing reifyNode:node_modules/@napi-rs/canvas-darwin-x64 Completed in 13ms
+242 timing reifyNode:node_modules/@napi-rs/canvas-darwin-arm64 Completed in 13ms
+243 timing reifyNode:node_modules/@napi-rs/canvas-android-arm64 Completed in 13ms
+244 timing reifyNode:node_modules/fsevents Completed in 13ms
+245 timing reifyNode:node_modules/@next/swc-win32-arm64-msvc Completed in 13ms
+246 timing reifyNode:node_modules/@next/swc-linux-x64-musl Completed in 13ms
+247 timing reifyNode:node_modules/@next/swc-linux-x64-gnu Completed in 13ms
+248 timing reifyNode:node_modules/@next/swc-linux-arm64-musl Completed in 13ms
+249 timing reifyNode:node_modules/@next/swc-linux-arm64-gnu Completed in 13ms
+250 timing reifyNode:node_modules/@next/swc-darwin-x64 Completed in 13ms
+251 timing reifyNode:node_modules/@next/swc-darwin-arm64 Completed in 13ms
+252 timing reifyNode:node_modules/@img/sharp-win32-ia32 Completed in 13ms
+253 timing reifyNode:node_modules/@img/sharp-win32-arm64 Completed in 13ms
+254 timing reifyNode:node_modules/@img/sharp-webcontainers-wasm32 Completed in 12ms
+255 timing reifyNode:node_modules/@img/sharp-linuxmusl-x64 Completed in 12ms
+256 timing reifyNode:node_modules/@img/sharp-linuxmusl-arm64 Completed in 12ms
+257 timing reifyNode:node_modules/@img/sharp-linux-x64 Completed in 12ms
+258 timing reifyNode:node_modules/@img/sharp-linux-s390x Completed in 12ms
+259 timing reifyNode:node_modules/@img/sharp-linux-riscv64 Completed in 12ms
+260 timing reifyNode:node_modules/@img/sharp-linux-ppc64 Completed in 12ms
+261 timing reifyNode:node_modules/@img/sharp-linux-arm64 Completed in 12ms
+262 timing reifyNode:node_modules/@img/sharp-linux-arm Completed in 13ms
+263 timing reifyNode:node_modules/@img/sharp-libvips-linuxmusl-x64 Completed in 13ms
+264 timing reifyNode:node_modules/@img/sharp-libvips-linuxmusl-arm64 Completed in 13ms
+265 timing reifyNode:node_modules/@img/sharp-libvips-linux-x64 Completed in 13ms
+266 timing reifyNode:node_modules/@img/sharp-libvips-linux-s390x Completed in 13ms
+267 timing reifyNode:node_modules/@img/sharp-libvips-linux-riscv64 Completed in 13ms
+268 timing reifyNode:node_modules/@img/sharp-libvips-linux-ppc64 Completed in 13ms
+269 timing reifyNode:node_modules/@img/sharp-libvips-linux-arm64 Completed in 13ms
+270 timing reifyNode:node_modules/@img/sharp-libvips-linux-arm Completed in 13ms
+271 timing reifyNode:node_modules/@img/sharp-libvips-darwin-x64 Completed in 13ms
+272 timing reifyNode:node_modules/@img/sharp-libvips-darwin-arm64 Completed in 13ms
+273 timing reifyNode:node_modules/@img/sharp-freebsd-wasm32 Completed in 13ms
+274 timing reifyNode:node_modules/@img/sharp-darwin-x64 Completed in 13ms
+275 timing reifyNode:node_modules/@img/sharp-darwin-arm64 Completed in 13ms
+276 timing reifyNode:node_modules/@esbuild/win32-ia32 Completed in 13ms
+277 timing reifyNode:node_modules/@esbuild/win32-arm64 Completed in 13ms
+278 timing reifyNode:node_modules/@esbuild/sunos-x64 Completed in 13ms
+279 timing reifyNode:node_modules/@esbuild/openharmony-arm64 Completed in 13ms
+280 timing reifyNode:node_modules/@esbuild/openbsd-x64 Completed in 13ms
+281 timing reifyNode:node_modules/@esbuild/openbsd-arm64 Completed in 13ms
+282 timing reifyNode:node_modules/@esbuild/netbsd-x64 Completed in 13ms
+283 timing reifyNode:node_modules/@esbuild/netbsd-arm64 Completed in 13ms
+284 timing reifyNode:node_modules/@esbuild/linux-x64 Completed in 13ms
+285 timing reifyNode:node_modules/@esbuild/linux-s390x Completed in 13ms
+286 timing reifyNode:node_modules/@esbuild/linux-riscv64 Completed in 13ms
+287 timing reifyNode:node_modules/@esbuild/linux-ppc64 Completed in 13ms
+288 timing reifyNode:node_modules/@esbuild/linux-mips64el Completed in 13ms
+289 timing reifyNode:node_modules/@esbuild/linux-loong64 Completed in 13ms
+290 timing reifyNode:node_modules/@esbuild/linux-ia32 Completed in 13ms
+291 timing reifyNode:node_modules/@esbuild/linux-arm64 Completed in 14ms
+292 timing reifyNode:node_modules/@esbuild/linux-arm Completed in 14ms
+293 timing reifyNode:node_modules/@esbuild/freebsd-x64 Completed in 14ms
+294 timing reifyNode:node_modules/@esbuild/freebsd-arm64 Completed in 14ms
+295 timing reifyNode:node_modules/@esbuild/darwin-x64 Completed in 13ms
+296 timing reifyNode:node_modules/@esbuild/darwin-arm64 Completed in 13ms
+297 timing reifyNode:node_modules/@esbuild/android-x64 Completed in 13ms
+298 timing reifyNode:node_modules/@esbuild/android-arm64 Completed in 13ms
+299 timing reifyNode:node_modules/@esbuild/android-arm Completed in 13ms
+300 timing reifyNode:node_modules/@esbuild/aix-ppc64 Completed in 13ms
+301 silly tarball no local data for @napi-rs/canvas@https://registry.npmjs.org/@napi-rs/canvas/-/canvas-0.1.100.tgz. Extracting by manifest.
+302 silly tarball no local data for @napi-rs/canvas-win32-x64-msvc@https://registry.npmjs.org/@napi-rs/canvas-win32-x64-msvc/-/canvas-win32-x64-msvc-0.1.100.tgz. Extracting by manifest.
+303 silly tarball no local data for @emnapi/runtime@https://registry.npmjs.org/@emnapi/runtime/-/runtime-1.11.3.tgz. Extracting by manifest.
+304 silly tarball no local data for pdfjs-dist@https://registry.npmjs.org/pdfjs-dist/-/pdfjs-dist-4.10.38.tgz. Extracting by manifest.
+305 silly tarball no local data for @img/sharp-wasm32@https://registry.npmjs.org/@img/sharp-wasm32/-/sharp-wasm32-0.35.4.tgz. Extracting by manifest.
+306 http fetch GET 200 https://registry.npmjs.org/@napi-rs/canvas/-/canvas-0.1.100.tgz 212ms (cache miss)
+307 timing reifyNode:node_modules/@napi-rs/canvas Completed in 232ms
+308 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 280ms
+309 timing auditReport:getReport Completed in 283ms
+310 silly audit report {
+310 silly audit report   'drizzle-orm': [
+310 silly audit report     {
+310 silly audit report       id: 1116251,
+310 silly audit report       url: 'https://github.com/advisories/GHSA-gpj5-g38j-94v9',
+310 silly audit report       title: 'Drizzle ORM has SQL injection via improperly escaped SQL identifiers',
+310 silly audit report       severity: 'high',
+310 silly audit report       vulnerable_versions: '<0.45.2',
+310 silly audit report       cwe: [Array],
+310 silly audit report       cvss: [Object]
+310 silly audit report     }
+310 silly audit report   ],
+310 silly audit report   postcss: [
+310 silly audit report     {
+310 silly audit report       id: 1130709,
+310 silly audit report       url: 'https://github.com/advisories/GHSA-fxqj-rqcc-2cmp',
+310 silly audit report       title: 'PostCSS: incomplete fix of GHSA-6g55-p6wh-862q — attacker-controlled sourceMappingURL reads arbitrary .map files when `from` is unset',
+310 silly audit report       severity: 'moderate',
+310 silly audit report       vulnerable_versions: '<=8.5.22',
+310 silly audit report       cwe: [Array],
+310 silly audit report       cvss: [Object]
+310 silly audit report     },
+310 silly audit report     {
+310 silly audit report       id: 1117015,
+310 silly audit report       url: 'https://github.com/advisories/GHSA-qx2v-qp2m-jg93',
+310 silly audit report       title: 'PostCSS has XSS via Unescaped </style> in its CSS Stringify Output',
+310 silly audit report       severity: 'moderate',
+310 silly audit report       vulnerable_versions: '<8.5.10',
+310 silly audit report       cwe: [Array],
+310 silly audit report       cvss: [Object]
+310 silly audit report     },
+310 silly audit report     {
+310 silly audit report       id: 1124252,
+310 silly audit report       url: 'https://github.com/advisories/GHSA-6g55-p6wh-862q',
+310 silly audit report       title: 'PostCSS: Arbitrary file read and information disclosure via attacker-controlled sourceMappingURL in CSS comments',
+310 silly audit report       severity: 'high',
+310 silly audit report       vulnerable_versions: '<=8.5.11',
+310 silly audit report       cwe: [Array],
+310 silly audit report       cvss: [Object]
+310 silly audit report     },
+310 silly audit report     {
+310 silly audit report       id: 1139510,
+310 silly audit report       url: 'https://github.com/advisories/GHSA-r28c-9q8g-f849',
+310 silly audit report       title: 'PostCSS: Path Traversal in Previous Source Map Auto-Loading (sourceMappingURL) leads to Arbitrary .map File Disclosure',
+310 silly audit report       severity: 'high',
+310 silly audit report       vulnerable_versions: '<=8.5.17',
+310 silly audit report       cwe: [Array],
+310 silly audit report       cvss: [Object]
+310 silly audit report     }
+310 silly audit report   ]
+310 silly audit report }
+311 timing metavuln:cache:get:security-advisory:drizzle-orm:/Nb+v90IduH9I/oY32TFP1Rek3Pyr4qeiqx1JjHll/Y7906EdpUtRqndFmPPzbkiX1H22IHNJjTCLn0V6+VqXA== Completed in 10ms
+312 timing metavuln:cache:get:security-advisory:postcss:AESkqup7C9sLtHL0OzenAvihqmLzSTOW4+0zIkCCeUjI0qvgEu/UCFfVCIlWzUpfDq20KxUSH5Ru8h4LoxJKRA== Completed in 10ms
+313 timing metavuln:cache:get:security-advisory:postcss:vffDf5zeMAO2NG2g47VKaOSrYbOxy9RP7hONH+CZvut446KUCIkc3Fp1vXR3T1gMxB3d9F68wTGe2BUQF6ut/w== Completed in 10ms
+314 timing metavuln:cache:get:security-advisory:postcss:685RVq5xScaqegAXk2BRJrsMaZmsz1d/volUoA67iVw3AvHhUlX03u+VPRrmo8iuObcSDvuZF+fuiOnLC9L1uA== Completed in 15ms
+315 timing metavuln:cache:get:security-advisory:postcss:CYQpgMxvTqXBVaZq1NAr4RIFkWLFCwyobLa0hEv7E4gMg411Yb94I7Uru51Ci3hUITmSGFK7DCDkX4TqzQYsaw== Completed in 16ms
+316 http fetch GET 200 https://registry.npmjs.org/@emnapi/runtime/-/runtime-1.11.3.tgz 379ms (cache miss)
+317 timing reifyNode:node_modules/@emnapi/runtime Completed in 398ms
+318 http fetch GET 200 https://registry.npmjs.org/postcss 129ms (cache revalidated)
+319 timing metavuln:packument:postcss Completed in 133ms
+320 timing metavuln:load:security-advisory:postcss:1130709 Completed in 3ms
+321 timing metavuln:calculate:security-advisory:postcss:1130709 Completed in 136ms
+322 timing metavuln:load:security-advisory:postcss:1117015 Completed in 2ms
+323 timing metavuln:calculate:security-advisory:postcss:1117015 Completed in 138ms
+324 timing metavuln:load:security-advisory:postcss:1124252 Completed in 2ms
+325 timing metavuln:calculate:security-advisory:postcss:1124252 Completed in 140ms
+326 timing metavuln:load:security-advisory:postcss:1139510 Completed in 1ms
+327 timing metavuln:calculate:security-advisory:postcss:1139510 Completed in 141ms
+328 http fetch GET 200 https://registry.npmjs.org/drizzle-orm 430ms (cache revalidated)
+329 timing metavuln:packument:drizzle-orm Completed in 465ms
+330 timing metavuln:load:security-advisory:drizzle-orm:1116251 Completed in 4ms
+331 timing metavuln:calculate:security-advisory:drizzle-orm:1116251 Completed in 469ms
+332 timing metavuln:cache:get:security-advisory:next:8RlZE+IBinmJoMk6uVcV95MAfxYTQeaA9Sha1X47EU6Yn2I1DpgEjVbSe9Dat8c1Oy+nk6MRHrCODNvFggnzeg== Completed in 7ms
+333 http fetch GET 200 https://registry.npmjs.org/next 235ms (cache revalidated)
+334 timing metavuln:packument:next Completed in 571ms
+335 timing metavuln:load:security-advisory:next:AESkqup7C9sLtHL0OzenAvihqmLzSTOW4+0zIkCCeUjI0qvgEu/UCFfVCIlWzUpfDq20KxUSH5Ru8h4LoxJKRA== Completed in 61ms
+336 timing metavuln:calculate:security-advisory:next:AESkqup7C9sLtHL0OzenAvihqmLzSTOW4+0zIkCCeUjI0qvgEu/UCFfVCIlWzUpfDq20KxUSH5Ru8h4LoxJKRA== Completed in 632ms
+337 timing auditReport:init Completed in 1181ms
+338 timing reify:audit Completed in 1465ms
+339 http fetch GET 200 https://registry.npmjs.org/@img/sharp-wasm32/-/sharp-wasm32-0.35.4.tgz 1495ms (cache miss)
+340 timing reifyNode:node_modules/@img/sharp-wasm32 Completed in 1516ms
+341 http fetch GET 200 https://registry.npmjs.org/@napi-rs/canvas-win32-x64-msvc/-/canvas-win32-x64-msvc-0.1.100.tgz 4144ms (cache miss)
+342 timing reifyNode:node_modules/@napi-rs/canvas-win32-x64-msvc Completed in 4164ms
+343 http fetch GET 200 https://registry.npmjs.org/pdfjs-dist/-/pdfjs-dist-4.10.38.tgz 4641ms (cache miss)
+344 timing reifyNode:node_modules/pdfjs-dist Completed in 4662ms
+345 timing reify:unpack Completed in 4663ms
+346 timing reify:unretire Completed in 0ms
+347 timing build:queue Completed in 2ms
+348 timing build:deps Completed in 2ms
+349 timing build Completed in 2ms
+350 timing reify:build Completed in 3ms
+351 timing reify:trash Completed in 4ms
+352 timing reify:save Completed in 58ms
+353 timing reify Completed in 7213ms
+354 silly ADD node_modules/@napi-rs/canvas-win32-x64-msvc
+355 silly ADD
+356 silly ADD
+357 silly ADD
+358 silly ADD
+359 silly ADD
+360 silly ADD
+361 silly ADD
+362 silly ADD
+363 silly ADD
+364 silly ADD
+365 silly ADD node_modules/@napi-rs/canvas
+366 silly ADD node_modules/pdfjs-dist
+367 silly ADD
+368 silly ADD
+369 silly ADD
+370 silly ADD
+371 silly ADD
+372 silly ADD
+373 silly ADD
+374 silly ADD
+375 silly ADD
+376 silly ADD
+377 silly ADD
+378 silly ADD node_modules/@img/sharp-wasm32
+379 silly ADD
+380 silly ADD
+381 silly ADD
+382 silly ADD
+383 silly ADD
+384 silly ADD
+385 silly ADD
+386 silly ADD
+387 silly ADD
+388 silly ADD
+389 silly ADD
+390 silly ADD
+391 silly ADD
+392 silly ADD
+393 silly ADD
+394 silly ADD
+395 silly ADD
+396 silly ADD
+397 silly ADD
+398 silly ADD
+399 silly ADD
+400 silly ADD
+401 silly ADD
+402 silly ADD
+403 silly ADD
+404 silly ADD
+405 silly ADD
+406 silly ADD
+407 silly ADD
+408 silly ADD
+409 silly ADD
+410 silly ADD
+411 silly ADD
+412 silly ADD
+413 silly ADD
+414 silly ADD
+415 silly ADD
+416 silly ADD
+417 silly ADD
+418 silly ADD
+419 silly ADD
+420 silly ADD
+421 silly ADD
+422 silly ADD
+423 silly ADD
+424 silly ADD
+425 silly ADD node_modules/@emnapi/runtime
+426 timing command:install Completed in 7304ms
+427 verbose exit 0
+428 timing npm Completed in 11303ms
+429 info ok

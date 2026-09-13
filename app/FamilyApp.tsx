@@ -37,7 +37,7 @@ function Cover({game,large=false}:{game:Game;large?:boolean}) {
   const [failed,setFailed]=useState(false);
   useEffect(()=>setFailed(false),[game.coverPath]);
   return <div className={`cover${large?" cover-large":""}${game.coverPath&&!failed?" has-image":""}`} aria-label={`Boîte de ${game.name}`} role="img">
-    {game.coverPath&&!failed?<img src={game.coverPath} alt="" loading={large?"eager":"lazy"} onError={()=>setFailed(true)}/>:<span>{game.name}</span>}
+    {game.coverPath&&!failed?<img src={game.coverPath} alt="" loading={large?"eager":"lazy"} decoding="async" fetchPriority={large?"high":"low"} onError={()=>setFailed(true)}/>:<span>{game.name}</span>}
   </div>;
 }
 

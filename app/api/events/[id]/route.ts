@@ -1,0 +1,1 @@
+import { db } from "@/lib/db";import { NextResponse } from "next/server";export async function DELETE(_:Request,{params}:{params:Promise<{id:string}>}){const id=Number((await params).id);if(!Number.isInteger(id))return NextResponse.json({error:"Événement invalide."},{status:400});db.prepare("DELETE FROM game_events WHERE id=?").run(id);return new NextResponse(null,{status:204})}

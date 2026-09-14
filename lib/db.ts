@@ -19,7 +19,13 @@ CREATE TABLE IF NOT EXISTS rule_sections (id INTEGER PRIMARY KEY, gameId INTEGER
 CREATE VIRTUAL TABLE IF NOT EXISTS rules_fts USING fts5(gameId UNINDEXED, title, content);`);
 if (!db.prepare("PRAGMA table_info(games)").all().some((column: any) => column.name === "rulesUrl")) { try { db.exec("ALTER TABLE games ADD COLUMN rulesUrl TEXT") } catch (error) { if (!(error instanceof Error) || !error.message.includes("duplicate column name")) throw error } }
 const needsSeedTags = !db.prepare("PRAGMA table_info(games)").all().some((column: any) => column.name === "tags");
-if (needsSeedTags) db.exec("ALTER TABLE games ADD COLUMN tags TEXT NOT NULL DEFAULT '[]'");
+if (needsSeedTags) {
+  try {
+    db.exec("ALTER TABLE games ADD COLUMN tags TEXT NOT NULL DEFAULT '[]'");
+  } catch (error) {
+    if (!(error instanceof Error) || !error.message.includes("duplicate column name")) throw error;
+  }
+}
 db.exec("CREATE TABLE IF NOT EXISTS rule_documents (id INTEGER PRIMARY KEY, gameId INTEGER NOT NULL REFERENCES games(id) ON DELETE CASCADE, filePath TEXT NOT NULL, fileName TEXT NOT NULL, createdAt TEXT DEFAULT CURRENT_TIMESTAMP)");
 db.exec("CREATE TABLE IF NOT EXISTS rule_pages (id INTEGER PRIMARY KEY, documentId INTEGER NOT NULL REFERENCES rule_documents(id) ON DELETE CASCADE, gameId INTEGER NOT NULL REFERENCES games(id) ON DELETE CASCADE, page INTEGER NOT NULL, content TEXT NOT NULL); CREATE VIRTUAL TABLE IF NOT EXISTS rule_pages_fts USING fts5(content, content='rule_pages', content_rowid='id')");
 export const slugify = (s:string) => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"");
@@ -55,7 +61,6 @@ db.transaction(() => seedGames.forEach(game => {
 })).immediate();
 if (needsSeedTags) db.transaction(() => seedGames.forEach(game => db.prepare("UPDATE games SET tags=? WHERE name=?").run(JSON.stringify(game.tags || []),game.name)))();
 db.transaction(() => {
-  db.prepare("UPDATE games SET active=0 WHERE name IN ('Fort Boyard','Monopoly','Risk')").run();
   db.exec("CREATE UNIQUE INDEX IF NOT EXISTS games_active_name_unique ON games(lower(trim(name))) WHERE active=1");
 }).immediate();
 const fillCover=db.prepare("UPDATE games SET coverPath=? WHERE name=? AND (coverPath IS NULL OR coverPath=?)");

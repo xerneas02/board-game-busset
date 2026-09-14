@@ -11,16 +11,20 @@ export const db = globalDb.db || new Database(path);
 if (process.env.NODE_ENV !== "production") globalDb.db = db;
 db.pragma("foreign_keys = ON");
 db.pragma("busy_timeout = 10000");
-db.exec(`CREATE TABLE IF NOT EXISTS games (id INTEGER PRIMARY KEY, slug TEXT UNIQUE, name TEXT NOT NULL, coverPath TEXT, minPlayers INTEGER NOT NULL, maxPlayers INTEGER NOT NULL, estimatedMinutes INTEGER, difficulty TEXT, rating INTEGER, notes TEXT, active INTEGER DEFAULT 1, createdAt TEXT DEFAULT CURRENT_TIMESTAMP, updatedAt TEXT DEFAULT CURRENT_TIMESTAMP);
+db.exec(`CREATE TABLE IF NOT EXISTS games (id INTEGER PRIMARY KEY, slug TEXT UNIQUE, name TEXT NOT NULL, coverPath TEXT, minPlayers INTEGER NOT NULL, maxPlayers INTEGER NOT NULL, estimatedMinutes INTEGER, difficulty TEXT, rating INTEGER, notes TEXT, tags TEXT NOT NULL DEFAULT '[]', active INTEGER DEFAULT 1, createdAt TEXT DEFAULT CURRENT_TIMESTAMP, updatedAt TEXT DEFAULT CURRENT_TIMESTAMP);
 CREATE TABLE IF NOT EXISTS players (id INTEGER PRIMARY KEY, name TEXT NOT NULL UNIQUE, color TEXT, active INTEGER DEFAULT 1, createdAt TEXT DEFAULT CURRENT_TIMESTAMP);
 CREATE TABLE IF NOT EXISTS plays (id INTEGER PRIMARY KEY, gameId INTEGER NOT NULL REFERENCES games(id), playedAt TEXT DEFAULT CURRENT_TIMESTAMP, duration INTEGER, notes TEXT);
 CREATE TABLE IF NOT EXISTS participants (playId INTEGER REFERENCES plays(id) ON DELETE CASCADE, playerId INTEGER REFERENCES players(id), winner INTEGER DEFAULT 0, score INTEGER, PRIMARY KEY(playId,playerId));
 CREATE TABLE IF NOT EXISTS rule_sections (id INTEGER PRIMARY KEY, gameId INTEGER REFERENCES games(id) ON DELETE CASCADE, title TEXT NOT NULL, content TEXT NOT NULL, position INTEGER DEFAULT 0);
 CREATE VIRTUAL TABLE IF NOT EXISTS rules_fts USING fts5(gameId UNINDEXED, title, content);`);
 if (!db.prepare("PRAGMA table_info(games)").all().some((column: any) => column.name === "rulesUrl")) { try { db.exec("ALTER TABLE games ADD COLUMN rulesUrl TEXT") } catch (error) { if (!(error instanceof Error) || !error.message.includes("duplicate column name")) throw error } }
+const needsSeedTags = !db.prepare("PRAGMA table_info(games)").all().some((column: any) => column.name === "tags");
+if (needsSeedTags) db.exec("ALTER TABLE games ADD COLUMN tags TEXT NOT NULL DEFAULT '[]'");
 db.exec("CREATE TABLE IF NOT EXISTS rule_documents (id INTEGER PRIMARY KEY, gameId INTEGER NOT NULL REFERENCES games(id) ON DELETE CASCADE, filePath TEXT NOT NULL, fileName TEXT NOT NULL, createdAt TEXT DEFAULT CURRENT_TIMESTAMP)");
 db.exec("CREATE TABLE IF NOT EXISTS rule_pages (id INTEGER PRIMARY KEY, documentId INTEGER NOT NULL REFERENCES rule_documents(id) ON DELETE CASCADE, gameId INTEGER NOT NULL REFERENCES games(id) ON DELETE CASCADE, page INTEGER NOT NULL, content TEXT NOT NULL); CREATE VIRTUAL TABLE IF NOT EXISTS rule_pages_fts USING fts5(content, content='rule_pages', content_rowid='id')");
 export const slugify = (s:string) => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"");
+export const cleanTags = (value:unknown) => [...new Set((Array.isArray(value)?value:[]).map(tag=>String(tag).trim()).filter(Boolean))].slice(0,20);
+export const gameJson = (row:any) => ({...row,tags:(()=>{try{return cleanTags(JSON.parse(row.tags||"[]"))}catch{return[]}})()});
 const duplicateGroups = db.prepare("SELECT lower(trim(name)) name FROM games WHERE active=1 GROUP BY lower(trim(name)) HAVING count(*)>1").all() as {name:string}[];
 db.transaction(() => {
   for (const group of duplicateGroups) {
@@ -42,13 +46,14 @@ db.transaction(() => {
     }
   }
 }).immediate();
-const insertSeed = db.prepare("INSERT OR IGNORE INTO games (slug,name,minPlayers,maxPlayers,estimatedMinutes,difficulty,rating) VALUES (?,?,?,?,?,?,?)");
+const insertSeed = db.prepare("INSERT OR IGNORE INTO games (slug,name,minPlayers,maxPlayers,estimatedMinutes,difficulty,rating,tags) VALUES (?,?,?,?,?,?,?,?)");
 const findActiveByName = db.prepare("SELECT id FROM games WHERE active=1 AND lower(trim(name))=lower(trim(?))");
 const fillDifficulty = db.prepare("UPDATE games SET difficulty=? WHERE name=? AND (difficulty IS NULL OR difficulty IN ('Très facile','Facile','Moyenne','Relevée'))");
 db.transaction(() => seedGames.forEach(game => {
-  if (!findActiveByName.get(game.name)) insertSeed.run(slugify(game.name), game.name, game.min, game.max, game.minutes ?? null, game.difficulty ?? null, game.rating ?? null);
+  if (!findActiveByName.get(game.name)) insertSeed.run(slugify(game.name), game.name, game.min, game.max, game.minutes ?? null, game.difficulty ?? null, game.rating ?? null, JSON.stringify(game.tags || []));
   if (game.difficulty !== undefined) fillDifficulty.run(game.difficulty, game.name);
 })).immediate();
+if (needsSeedTags) db.transaction(() => seedGames.forEach(game => db.prepare("UPDATE games SET tags=? WHERE name=?").run(JSON.stringify(game.tags || []),game.name)))();
 db.transaction(() => {
   db.prepare("UPDATE games SET active=0 WHERE name IN ('Fort Boyard','Monopoly','Risk')").run();
   db.exec("CREATE UNIQUE INDEX IF NOT EXISTS games_active_name_unique ON games(lower(trim(name))) WHERE active=1");

@@ -25,6 +25,11 @@ async function main() {
       assert.ok(sizing.scrollWidth <= width, `Débordement à ${width}px : ${sizing.scrollWidth}`);
 
       if (width === 390) {
+        await page.waitForSelector(".tag-filter button");
+        const tag = ".tag-filter button";
+        await page.click(tag); assert.equal(await page.$eval(tag, button=>button.getAttribute("data-mode")),"include");
+        await page.click(tag); assert.equal(await page.$eval(tag, button=>button.getAttribute("data-mode")),"exclude");
+        await page.click(tag); assert.equal(await page.$eval(tag, button=>button.getAttribute("data-mode")),"neutral");
         await page.screenshot({ path: "mobile-390.png" });
         await page.click(".bottom-nav button:nth-child(2)");
         await page.waitForSelector(".game-tile");

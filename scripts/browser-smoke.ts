@@ -43,6 +43,14 @@ async function main() {
         await page.screenshot({ path: "library-390.png" });
         await page.evaluate(() => [...document.querySelectorAll<HTMLButtonElement>(".game-tile")].find(button => button.querySelector(":scope > span")?.textContent === "Catan")?.click());
         await page.waitForSelector(".game-title");
+        await page.click('button[aria-label="Modifier ce jeu"]');
+        await page.waitForSelector(".editor-tag-list button");
+        assert.ok(await page.$$eval(".editor-tag-list button", buttons=>buttons.length>=5));
+        await page.type('.new-tag input',"Jeu coopératif");
+        await page.click('.new-tag button');
+        assert.ok(await page.$$eval(".editor-tag-list button",buttons=>buttons.some(button=>button.textContent?.includes("Jeu coopératif")&&button.getAttribute("aria-pressed")==="true")));
+        await page.screenshot({path:"tags-editor-390.png"});
+        await page.click(".form-sheet .sheet-close");
         await page.evaluate(() => [...document.querySelectorAll<HTMLButtonElement>("button")].find(button => button.textContent?.trim() === "Nouvelle partie")?.click());
         await page.waitForSelector("#picker-title");
         if (!(await page.$(".known-player-list button"))) {

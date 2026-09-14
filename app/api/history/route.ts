@@ -1,0 +1,4 @@
+import { db } from "@/lib/db";
+import { NextResponse } from "next/server";
+export const dynamic="force-dynamic";
+export async function GET(){const plays=db.prepare("SELECT plays.id,plays.gameId,games.name gameName,plays.playedAt,plays.duration,plays.notes FROM plays JOIN games ON games.id=plays.gameId ORDER BY plays.playedAt DESC LIMIT 200").all() as any[];const participants=db.prepare("SELECT participants.playId,players.id,players.name,participants.winner,participants.score FROM participants JOIN players ON players.id=participants.playerId ORDER BY players.name").all() as any[];return NextResponse.json(plays.map(play=>({...play,participants:participants.filter(participant=>participant.playId===play.id)})));}

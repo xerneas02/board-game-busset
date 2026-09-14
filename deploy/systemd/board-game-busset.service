@@ -1,0 +1,20 @@
+[Unit]
+Description=Board Game Busset Next.js application
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/opt/board-game-busset
+Environment=NODE_ENV=production
+Environment=HOSTNAME=127.0.0.1
+EnvironmentFile=/etc/board-game-busset.env
+ExecStartPre=/bin/sh -c 'mkdir -p /opt/board-game-busset/.next/standalone/.next/static /opt/board-game-busset/.next/standalone/public && cp -a /opt/board-game-busset/.next/static/. /opt/board-game-busset/.next/standalone/.next/static/ && cp -a /opt/board-game-busset/public/. /opt/board-game-busset/.next/standalone/public/'
+ExecStart=/usr/bin/node /opt/board-game-busset/.next/standalone/server.js
+Restart=on-failure
+RestartSec=5
+KillSignal=SIGINT
+TimeoutStopSec=20
+
+[Install]
+WantedBy=multi-user.target

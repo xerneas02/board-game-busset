@@ -11,4 +11,4 @@ export async function proxy(request: NextRequest) {
   return NextResponse.redirect(login);
 }
 
-export const config = { matcher: ["/((?!_next|icon.svg|manifest.webmanifest|sw.js|login|api/login).*)"] };
+export const config = { matcher: ["/((?!_next|covers|icon.svg|icon-192.png|icon-512.png|manifest.webmanifest|sw.js|login|api/login).*)"] };

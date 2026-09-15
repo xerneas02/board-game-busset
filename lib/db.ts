@@ -29,7 +29,7 @@ if (needsSeedTags) {
     if (!(error instanceof Error) || !error.message.includes("duplicate column name")) throw error;
   }
 }
-db.exec("CREATE TABLE IF NOT EXISTS rule_documents (id INTEGER PRIMARY KEY, gameId INTEGER NOT NULL REFERENCES games(id) ON DELETE CASCADE, filePath TEXT NOT NULL, fileName TEXT NOT NULL, createdAt TEXT DEFAULT CURRENT_TIMESTAMP)");
+db.exec("CREATE TABLE IF NOT EXISTS app_metadata (key TEXT PRIMARY KEY, value TEXT NOT NULL); CREATE TABLE IF NOT EXISTS rule_documents (id INTEGER PRIMARY KEY, gameId INTEGER NOT NULL REFERENCES games(id) ON DELETE CASCADE, filePath TEXT NOT NULL, fileName TEXT NOT NULL, createdAt TEXT DEFAULT CURRENT_TIMESTAMP)");
 db.exec("CREATE TABLE IF NOT EXISTS rule_pages (id INTEGER PRIMARY KEY, documentId INTEGER NOT NULL REFERENCES rule_documents(id) ON DELETE CASCADE, gameId INTEGER NOT NULL REFERENCES games(id) ON DELETE CASCADE, page INTEGER NOT NULL, content TEXT NOT NULL); CREATE VIRTUAL TABLE IF NOT EXISTS rule_pages_fts USING fts5(content, content='rule_pages', content_rowid='id')");
 // Migrate existing event totals so an event can be attributed to a player.
 if (!db.prepare("PRAGMA table_info(play_events)").all().some((column:any)=>column.name==="playerId")) db.transaction(()=>{
@@ -67,6 +67,8 @@ db.transaction(() => seedGames.forEach(game => {
   if (game.difficulty !== undefined) fillDifficulty.run(game.difficulty, game.name);
 })).immediate();
 if (needsSeedTags) db.transaction(() => seedGames.forEach(game => db.prepare("UPDATE games SET tags=? WHERE name=?").run(JSON.stringify(game.tags || []),game.name)))();
+const difficultyCalibration=new Map<string,number>([...seedGames.filter(game=>game.difficulty!==undefined).map(game=>[game.name,game.difficulty!] as const),["Concept",0.6],["Lama",0.3],["Pass the pigs",0.2],["District Noir",1.4],["Pierre Feuille Saumon Ciseau",0.7],["Oriflamme Alliance",1.9],["Barricade",0.8],["Onitama",2.6],["Citadelles",2.4],["Awalé",3.0],["Cribbage",2.7]]);
+if (!db.prepare("SELECT 1 FROM app_metadata WHERE key=?").get("difficulty-calibration-v2")) db.transaction(()=>{const update=db.prepare("UPDATE games SET difficulty=? WHERE name=? AND active=1");for(const [name,difficulty] of difficultyCalibration)update.run(difficulty,name);db.prepare("INSERT INTO app_metadata(key,value) VALUES(?,?)").run("difficulty-calibration-v2","family-first-playability")}).immediate();
 db.transaction(() => {
   db.exec("CREATE UNIQUE INDEX IF NOT EXISTS games_active_name_unique ON games(lower(trim(name))) WHERE active=1");
 }).immediate();

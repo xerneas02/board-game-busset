@@ -1,5 +1,5 @@
-const cache="sous-lescalier-v8";
-const precache=["/manifest.webmanifest","/icon-192.png","/icon-512.png"];
+const cache="sous-lescalier-v10";
+const precache=["/manifest.webmanifest","/icon.svg"];
 self.addEventListener("install",event=>event.waitUntil((async()=>{const store=await caches.open(cache);await store.addAll(precache);await self.skipWaiting()})()));
 self.addEventListener("activate",event=>event.waitUntil((async()=>{await Promise.all((await caches.keys()).filter(key=>key!==cache).map(key=>caches.delete(key)));await self.clients.claim()})()));
 self.addEventListener("fetch",event=>{if(event.request.method!=="GET"||new URL(event.request.url).pathname.startsWith("/api/"))return;if(event.request.mode==="navigate"){event.respondWith(fetch(event.request).then(response=>{if(response.ok)caches.open(cache).then(store=>store.put(event.request,response.clone()));return response}).catch(()=>caches.match(event.request).then(found=>found||caches.match("/"))));return}event.respondWith(caches.match(event.request).then(found=>found||fetch(event.request).then(response=>{if(response.ok)caches.open(cache).then(store=>store.put(event.request,response.clone()));return response})))});

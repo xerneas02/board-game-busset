@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { Dices, KeyRound } from "lucide-react";
+import { KeyRound } from "lucide-react";
 
 export default function LoginPage() {
   const [password, setPassword] = useState("");
@@ -18,5 +18,5 @@ export default function LoginPage() {
     location.assign(requested?.startsWith("/") && !requested.startsWith("//") ? requested : "/");
   }
 
-  return <main className="login-page"><section className="login-panel"><Dices className="login-dice"/><p>Notre ludothèque</p><h1>Sous l’escalier</h1><form onSubmit={unlock}><label htmlFor="family-password">Mot de passe familial</label><div className="password-field"><KeyRound/><input id="family-password" type="password" autoComplete="current-password" autoFocus required value={password} onChange={event=>{setPassword(event.target.value);setError("")}}/></div>{error&&<p className="login-error" role="alert">{error}</p>}<button className="primary" disabled={busy}>{busy?"Ouverture…":"Entrer"}</button></form></section></main>;
+  return <main className="login-page"><section className="login-panel"><img className="app-logo login-logo" src="/icon.svg" alt=""/><p>Notre ludothèque</p><h1>Sous l’escalier</h1><form onSubmit={unlock}><label htmlFor="family-password">Mot de passe familial</label><div className="password-field"><KeyRound/><input id="family-password" type="password" autoComplete="current-password" autoFocus required value={password} onChange={event=>{setPassword(event.target.value);setError("")}}/></div>{error&&<p className="login-error" role="alert">{error}</p>}<button className="primary" disabled={busy}>{busy?"Ouverture…":"Entrer"}</button></form></section></main>;
 }

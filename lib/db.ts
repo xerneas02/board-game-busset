@@ -21,6 +21,7 @@ CREATE TABLE IF NOT EXISTS active_session (id INTEGER PRIMARY KEY CHECK(id=1), g
 CREATE TABLE IF NOT EXISTS rule_sections (id INTEGER PRIMARY KEY, gameId INTEGER REFERENCES games(id) ON DELETE CASCADE, title TEXT NOT NULL, content TEXT NOT NULL, position INTEGER DEFAULT 0);
 CREATE VIRTUAL TABLE IF NOT EXISTS rules_fts USING fts5(gameId UNINDEXED, title, content);`);
 if (!db.prepare("PRAGMA table_info(games)").all().some((column: any) => column.name === "rulesUrl")) { try { db.exec("ALTER TABLE games ADD COLUMN rulesUrl TEXT") } catch (error) { if (!(error instanceof Error) || !error.message.includes("duplicate column name")) throw error } }
+if (!db.prepare("PRAGMA table_info(games)").all().some((column: any) => column.name === "lowerScoreWins")) { try { db.exec("ALTER TABLE games ADD COLUMN lowerScoreWins INTEGER NOT NULL DEFAULT 0") } catch (error) { if (!(error instanceof Error) || !error.message.includes("duplicate column name")) throw error } }
 const needsSeedTags = !db.prepare("PRAGMA table_info(games)").all().some((column: any) => column.name === "tags");
 if (needsSeedTags) {
   try {
@@ -37,7 +38,7 @@ if (!db.prepare("PRAGMA table_info(play_events)").all().some((column:any)=>colum
 }).immediate();
 export const slugify = (s:string) => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"");
 export const cleanTags = (value:unknown) => [...new Set((Array.isArray(value)?value:[]).map(tag=>String(tag).trim()).filter(Boolean))].slice(0,20);
-export const gameJson = (row:any) => ({...row,tags:(()=>{try{return cleanTags(JSON.parse(row.tags||"[]"))}catch{return[]}})()});
+export const gameJson = (row:any) => ({...row,lowerScoreWins:Boolean(row.lowerScoreWins),tags:(()=>{try{return cleanTags(JSON.parse(row.tags||"[]"))}catch{return[]}})()});
 const duplicateGroups = db.prepare("SELECT lower(trim(name)) name FROM games WHERE active=1 GROUP BY lower(trim(name)) HAVING count(*)>1").all() as {name:string}[];
 db.transaction(() => {
   for (const group of duplicateGroups) {

@@ -11,7 +11,8 @@ export async function PATCH(request:NextRequest,{params}:{params:Promise<{id:str
     return NextResponse.json({error:"Ce jeu est déjà dans la ludothèque."},{status:409});
   if(name) body.name=name;
   if("tags" in body) body.tags=JSON.stringify(cleanTags(body.tags));
-  const keys=["name","coverPath","minPlayers","maxPlayers","estimatedMinutes","difficulty","rating","notes","rulesUrl","tags","active"].filter(key=>key in body);
+  if("lowerScoreWins" in body) body.lowerScoreWins=body.lowerScoreWins?1:0;
+  const keys=["name","coverPath","minPlayers","maxPlayers","estimatedMinutes","difficulty","rating","notes","rulesUrl","tags","lowerScoreWins","active"].filter(key=>key in body);
   if(!keys.length) return NextResponse.json({error:"Rien à modifier."},{status:400});
   try {
     db.prepare(`UPDATE games SET ${keys.map(key=>`${key}=?`).join(",")},updatedAt=CURRENT_TIMESTAMP WHERE id=?`).run(...keys.map(key=>body[key]),id);

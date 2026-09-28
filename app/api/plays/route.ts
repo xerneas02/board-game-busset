@@ -12,6 +12,18 @@ export async function POST(request:NextRequest){
   const playerCount=db.prepare(`SELECT count(*) count FROM players WHERE id IN (${players.map(()=>"?").join(",")})`).get(...players.map(x=>x.id)) as {count:number};
   const eventCount=events.length?(db.prepare(`SELECT count(*) count FROM game_events WHERE gameId=? AND id IN (${events.map(()=>"?").join(",")})`).get(body.gameId,...events.map(x=>x.id)) as {count:number}).count:0;
   if(playerCount.count!==players.length||eventCount!==new Set(events.map(x=>x.id)).size)return NextResponse.json({error:"Joueur ou événement introuvable."},{status:400});
-  const id=db.transaction(()=>{const play=db.prepare("INSERT INTO plays(gameId,duration,notes) VALUES(?,?,?)").run(body.gameId,body.duration??null,body.notes||null),add=db.prepare("INSERT INTO participants(playId,playerId,winner,score) VALUES(?,?,?,?)"),event=db.prepare("INSERT INTO play_events(playId,eventId,playerId,count) VALUES(?,?,?,?)");players.forEach(x=>add.run(play.lastInsertRowid,x.id,x.winner?1:0,x.score??null));events.forEach(x=>event.run(play.lastInsertRowid,x.id,x.playerId??null,x.count));return play.lastInsertRowid})();
+  if(body.expectedSessionVersion!==undefined&&!Number.isInteger(body.expectedSessionVersion))return NextResponse.json({error:"Session invalide."},{status:400});
+  const id=db.transaction(()=>{
+    if(body.expectedSessionVersion!==undefined){
+      const session=db.prepare("SELECT gameId,version FROM active_session WHERE id=1").get() as {gameId:number;version:number}|undefined;
+      if(!session||session.gameId!==body.gameId||session.version!==body.expectedSessionVersion)return null;
+    }
+    const play=db.prepare("INSERT INTO plays(gameId,duration,notes) VALUES(?,?,?)").run(body.gameId,body.duration??null,body.notes||null),add=db.prepare("INSERT INTO participants(playId,playerId,winner,score) VALUES(?,?,?,?)"),event=db.prepare("INSERT INTO play_events(playId,eventId,playerId,count) VALUES(?,?,?,?)");
+    players.forEach(x=>add.run(play.lastInsertRowid,x.id,x.winner?1:0,x.score??null));
+    events.forEach(x=>event.run(play.lastInsertRowid,x.id,x.playerId??null,x.count));
+    if(body.expectedSessionVersion!==undefined)db.prepare("DELETE FROM active_session WHERE id=1").run();
+    return play.lastInsertRowid;
+  })();
+  if(id===null)return NextResponse.json({error:"La partie a été modifiée sur un autre téléphone. Rechargez la page avant de réessayer."},{status:409});
   return NextResponse.json({id},{status:201});
 }
